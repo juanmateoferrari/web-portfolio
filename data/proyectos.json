@@ -116,19 +116,61 @@
     "preview": "",
     "media": [
       {
-        "src": "proyectos/idm/Estructura-idm.JPG",
+        "src": "proyectos/idm/IMG_0758.JPG",
         "tipo": "imagen",
         "loop": false,
         "portada": false
       },
       {
-        "src": "proyectos/idm/Pantalla-idm.png",
+        "src": "proyectos/idm/IMG_0760.JPG",
         "tipo": "imagen",
         "loop": false,
         "portada": false
       },
       {
-        "src": "proyectos/idm/sistema-idm-para-introduccion.JPG",
+        "src": "proyectos/idm/IMG_0761.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0763.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0766.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0788.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0792.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0801.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0802.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/IMG_0841.JPG",
         "tipo": "imagen",
         "loop": false,
         "portada": false
