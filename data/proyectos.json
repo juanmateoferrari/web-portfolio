@@ -128,18 +128,6 @@
         "portada": false
       },
       {
-        "src": "proyectos/idm/IMG_0761.JPG",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
-      {
-        "src": "proyectos/idm/IMG_0763.JPG",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
-      {
         "src": "proyectos/idm/IMG_0766.JPG",
         "tipo": "imagen",
         "loop": false,
@@ -296,7 +284,7 @@
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.png",
+    "portada": "proyectos/visuales-sprlcl/portada.png",
     "preview": "",
     "media": [
       {
@@ -307,12 +295,6 @@
       },
       {
         "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152105.png",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
-      {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152649.png",
         "tipo": "imagen",
         "loop": false,
         "portada": false
