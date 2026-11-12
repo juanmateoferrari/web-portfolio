@@ -40,9 +40,7 @@ img, video { display: block; width: 100%; }
 @media (prefers-reduced-motion: reduce) { .js .medio.on { animation: none; } html { scroll-behavior: auto; } }
 
 /* 4. PORTADA */
-.cabecera { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
-.firma { display: flex; align-items: center; gap: .5rem; font-size: 1.4rem; font-weight: 500; letter-spacing: -.06em; }
-.firma span { color: var(--acento); font-size: 2rem; line-height: 1; }
+.cabecera { display: flex; justify-content: flex-end; align-items: center; padding: 1.5rem 0; }
 .cabecera nav { display: flex; align-items: center; gap: 1.5rem; font-size: .9rem; }
 .cabecera nav a:hover { color: var(--acento); }
 .cabecera .contacto-link { padding: .55rem 1rem; border: 1px solid var(--linea); border-radius: 3rem; }

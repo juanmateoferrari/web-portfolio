@@ -53,7 +53,7 @@ const videoPortada = p => {
 function vistaInicio() {
   document.title = CONFIG.nombre;
   app.innerHTML = `
-    <header class="cabecera"><a class="firma" href="#/">JMF<span aria-hidden="true">✳</span></a>
+    <header class="cabecera">
       <nav aria-label="Navegación principal"><a href="#/info">Sobre mí</a><a class="contacto-link" href="#contacto">Contacto <span aria-hidden="true">↗</span></a></nav></header>
     <section class="hero"><h1>${esc(CONFIG.nombre)}</h1><p>${esc(CONFIG.bio)}</p></section>
     <section class="trabajos" aria-labelledby="titulo-trabajos"><div class="seccion-titulo"><h2 id="titulo-trabajos">Trabajos seleccionados</h2></div>
