@@ -73,12 +73,11 @@ function vistaInfo() {
   app.innerHTML = `<article class="proyecto info">
     <a class="volver" href="#/">← Volver a los trabajos</a>
     <h1>Sobre mí</h1>
-    <div class="info-presentacion">
-      <figure class="info-retrato"><img src="${esc(CONFIG.sobreMi.foto)}" alt="Retrato de ${esc(CONFIG.nombre)}" decoding="async"></figure>
-      <div><p class="lead">${esc(CONFIG.sobreMi.intro)}</p>
-        <div class="info-texto">${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
-      </div>
-    </div>
+    <figure class="info-retrato" tabindex="0" aria-label="Retrato y presentación de ${esc(CONFIG.nombre)}">
+      <img src="${esc(CONFIG.sobreMi.foto)}" alt="Retrato de ${esc(CONFIG.nombre)}" decoding="async">
+      <figcaption><p>${esc(CONFIG.sobreMi.intro)}</p></figcaption>
+    </figure>
+    <div class="info-texto">${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
     <section class="info-areas" aria-labelledby="titulo-areas"><h2 id="titulo-areas">Áreas de trabajo</h2>
       <dl>${CONFIG.sobreMi.areas.map(a => `<div><dt>${esc(a.titulo)}</dt><dd>${esc(a.texto)}</dd></div>`).join('')}</dl>
     </section>
