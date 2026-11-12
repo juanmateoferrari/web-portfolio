@@ -78,8 +78,12 @@ function vistaInfo() {
       <figcaption><p>${esc(CONFIG.sobreMi.intro)}</p></figcaption>
     </figure>
     <div class="info-texto">${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
-    <section class="info-areas" aria-labelledby="titulo-areas"><h2 id="titulo-areas">Áreas de trabajo</h2>
-      <dl>${CONFIG.sobreMi.areas.map(a => `<div><dt>${esc(a.titulo)}</dt><dd>${esc(a.texto)}</dd></div>`).join('')}</dl>
+    <section class="info-areas" aria-labelledby="titulo-areas">
+      <div class="areas-cabecera"><h2 id="titulo-areas">Áreas de trabajo</h2><div class="areas-controles"><button type="button" data-area-scroll="-1" aria-controls="areas-carrusel">Anterior</button><button type="button" data-area-scroll="1" aria-controls="areas-carrusel">Siguiente</button></div></div>
+      <div class="areas-carrusel" id="areas-carrusel" role="region" aria-labelledby="titulo-areas" tabindex="0">${CONFIG.sobreMi.areas.map(a => {
+        const p = proyectos.find(p => p.slug === a.proyecto);
+        return `<article class="area-card">${p?.portada ? `<img src="${esc(p.portada)}" alt="" loading="lazy" decoding="async">` : ''}<div class="area-card-texto"><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p>${p ? `<a href="#/${esc(p.slug)}" aria-label="Ver proyecto: ${esc(p.titulo)}">Ver proyecto</a>` : ''}</div></article>`;
+      }).join('')}</div>
     </section>
   </article>${pie()}`;
 }
@@ -126,6 +130,11 @@ function navegar() {
 
 // Clic en una foto -> se amplía; clic de nuevo (o Esc) -> se cierra.
 app.addEventListener('click', e => {
+  const control = e.target.closest('[data-area-scroll]');
+  if (control) {
+    const carrusel = app.querySelector('.areas-carrusel');
+    carrusel.scrollBy({ left: Number(control.dataset.areaScroll) * (carrusel.querySelector('.area-card').getBoundingClientRect().width + 24), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  }
   if (e.target.matches('[data-zoom]')) {
     visor.innerHTML = `<img src="${e.target.src}" alt="">`;
     visor.showModal();

@@ -75,10 +75,21 @@ img, video { display: block; width: 100%; }
 .info-texto { max-width: 62ch; color: var(--tenue); font-size: 1.1rem; }
 .info-texto p + p { margin-top: 1.4em; }
 .info-areas { margin-top: 4rem; padding-top: 2rem; }
-.info-areas h2 { font-size: 1.2rem; margin-bottom: 2rem; }
-.info-areas dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
-.info-areas dt { font-weight: 500; margin-bottom: .7rem; }
-.info-areas dd { color: var(--tenue); font-size: .95rem; }
+.areas-cabecera { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; }
+.info-areas h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 400; }
+.areas-controles { display: flex; gap: 1.5rem; }
+.areas-controles button { border: 0; padding: .6rem 0; background: transparent; color: var(--tenue); font: inherit; font-size: .9rem; cursor: pointer; text-underline-offset: .3em; }
+.areas-controles button:hover { color: var(--texto); text-decoration: underline; }
+.areas-controles button:focus-visible, .areas-carrusel:focus-visible { outline: 2px solid var(--acento); outline-offset: 4px; }
+.areas-carrusel { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(280px, 38vw, 400px); gap: 24px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--tenue) transparent; padding-bottom: 1rem; }
+.areas-carrusel.desplazando { scroll-snap-type: none; }
+.area-card { position: relative; display: grid; aspect-ratio: 1; scroll-snap-align: start; background: #1b1d20; overflow: hidden; }
+.area-card > img { grid-area: 1 / 1; height: 100%; object-fit: cover; transition: transform .6s; }
+.area-card:hover > img, .area-card:focus-within > img { transform: scale(1.05) translateX(5px); }
+.area-card-texto { grid-area: 1 / 1; z-index: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; background: linear-gradient(transparent, rgba(0,0,0,.92) 85%); color: #fff; }
+.area-card h3 { font-size: 1.65rem; line-height: 1.1; margin-bottom: .8rem; }
+.area-card p { font-size: .95rem; line-height: 1.45; }
+.area-card a { align-self: flex-start; margin-top: 1rem; padding: .25rem 0; text-decoration: underline; text-underline-offset: .3em; font-size: .85rem; }
 
 /* 5. PROYECTO */
 .proyecto { padding: 8vh 0 6vh; }
@@ -111,7 +122,8 @@ img, video { display: block; width: 100%; }
 
 /* 7. MÓVIL */
 @media (max-width: 760px) {
-  .filas, .listas, .info-areas dl { grid-template-columns: 1fr; gap: 1.5rem; }
+  .filas, .listas { grid-template-columns: 1fr; gap: 1.5rem; }
+  .areas-carrusel { grid-auto-columns: min(85%, 360px); }
   .galeria { column-count: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .fila-img img { transition: none; } .fila:hover img, .fila:focus-visible img { transform: none; } }
@@ -122,7 +134,8 @@ img, video { display: block; width: 100%; }
 ::view-transition-group(*) { animation-duration: .4s; animation-timing-function: ease-in-out; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .2s; }
 @media (prefers-reduced-motion: reduce) {
-  .info-retrato img, .info-retrato figcaption { transition: none; }
+  .info-retrato img, .info-retrato figcaption, .area-card > img { transition: none; }
+  .info-retrato:hover img, .info-retrato:focus img, .area-card:hover > img, .area-card:focus-within > img { transform: none; }
   .preview-video, .trama { display: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }

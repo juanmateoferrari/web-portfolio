@@ -13,9 +13,9 @@ export const CONFIG = {
       // 'También desarrollo lámparas de cerámica hechas a mano, integrando el circuito y el recorrido de la luz desde el diseño de la pieza. La forma, los materiales y la técnica se piensan juntos.',
     ],
     areas: [
-      { titulo: 'Escenografía e iluminación', texto: 'Diseño y construcción de estructuras e integración de iluminación LED para espacios escénicos.' },
-      { titulo: 'Sistemas interactivos y visuales', texto: 'Programación, mapping y sistemas que vinculan el movimiento con la imagen, la luz y el sonido.' },
-      { titulo: 'Objetos y cerámica', texto: 'Diseño y modelado de piezas que incorporan electrónica y luz.' },
+      { titulo: 'Escena y luz', texto: 'Estructuras, iluminación y atmósferas que acompañan lo que sucede en escena.', proyecto: 'chiara' },
+      { titulo: 'Imagen e interacción', texto: 'Proyecciones y sistemas donde el movimiento transforma la imagen, la luz y el sonido.', proyecto: 'mapping-dinamico' },
+      { titulo: 'Objetos y cerámica', texto: 'Piezas hechas a mano que exploran el encuentro entre la materia y la luz.', proyecto: 'lamparas-ceramica' },
     ],
   },
   contacto: [                       // links del pie de página

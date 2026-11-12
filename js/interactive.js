@@ -20,9 +20,39 @@ export function cambiarVista(dibujar, activo) {
 export function iniciarEfectosVista(raiz, cfg) {
   const limpiar = [galeriaVisible(raiz)];
   if (movimientoReducido()) return () => limpiar.forEach(fn => fn());
+  if (raiz.querySelector('.areas-carrusel')) limpiar.push(carruselAreas(raiz.querySelector('.areas-carrusel')));
   if (cfg.portadasVideo) limpiar.push(portadas(raiz));
   if (cfg.trama && raiz.querySelector('.hero')) limpiar.push(trama(raiz.querySelector('.hero')));
   return () => limpiar.forEach(fn => fn());
+}
+
+// En escritorio los bordes del carrusel permiten recorrerlo al pasar el mouse.
+function carruselAreas(el) {
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return () => {};
+  const controller = new AbortController();
+  let frame = 0, direccion = 0, anterior = 0;
+  const parar = () => {
+    cancelAnimationFrame(frame); frame = 0; anterior = 0; direccion = 0;
+    el.classList.remove('desplazando');
+  };
+  const mover = tiempo => {
+    const paso = anterior ? Math.min(tiempo - anterior, 40) * .18 : 0;
+    anterior = tiempo;
+    el.scrollLeft += paso * direccion;
+    if (document.hidden || (direccion < 0 && el.scrollLeft <= 0) || (direccion > 0 && el.scrollLeft >= el.scrollWidth - el.clientWidth - 1)) { parar(); return; }
+    frame = requestAnimationFrame(mover);
+  };
+  el.addEventListener('pointermove', e => {
+    const r = el.getBoundingClientRect(), x = e.clientX - r.left;
+    const nueva = x < 64 ? -1 : x > r.width - 64 ? 1 : 0;
+    if (!nueva) { parar(); return; }
+    direccion = nueva;
+    if (!frame) { el.classList.add('desplazando'); frame = requestAnimationFrame(mover); }
+  }, { signal: controller.signal, passive: true });
+  el.addEventListener('pointerleave', parar, { signal: controller.signal });
+  el.addEventListener('focusin', parar, { signal: controller.signal });
+  document.addEventListener('visibilitychange', parar, { signal: controller.signal });
+  return () => { parar(); controller.abort(); };
 }
 
 // Los bucles de la galería descargan y reproducen solo al entrar en pantalla.
