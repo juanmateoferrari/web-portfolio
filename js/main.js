@@ -5,10 +5,12 @@
 // ============================================================
 import { CONFIG } from './config.js';
 import { initEfectos, observarRevelado } from './effects.js';
+import { iniciarEfectosVista, cambiarVista } from './interactive.js';
 
 const app = document.getElementById('app');
 const visor = document.getElementById('visor');
 let proyectos = [];
+let limpiarVista = () => {};
 
 // Escapa texto para que nunca se interprete como HTML.
 const esc = s => String(s ?? '').replace(/[&<>"']/g,
@@ -18,7 +20,7 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g,
 
 // Una foto/gif o un video. Videos "loop-*" se reproducen solos y mudos; el resto tiene controles.
 const medio = m => m.tipo === 'video'
-  ? `<figure class="medio"><video src="${m.src}" ${m.loop ? 'autoplay muted loop playsinline' : 'controls'} preload="metadata"></video></figure>`
+  ? `<figure class="medio"><video ${m.loop ? `data-gallery-loop data-src="${esc(m.src)}" muted loop playsinline` : `src="${esc(m.src)}" controls`} preload="none"></video></figure>`
   : `<figure class="medio"><img src="${m.src}" alt="" loading="lazy" data-zoom></figure>`;
 
 // Video incrustado de YouTube o Vimeo (se define en info.json -> embeds).
@@ -35,6 +37,16 @@ const lista = (titulo, items) => items.length
 const pie = () => `<footer class="pie" id="contacto"><span>¿Creamos algo juntos?</span>${CONFIG.contacto
   .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('')}</footer>`;
 
+// Solo los loop-* MP4/WebM se usan como previews; nunca cargan hasta reproducirse.
+const preview = p => CONFIG.efectos.portadasVideo && !matchMedia('(prefers-reduced-motion: reduce)').matches
+  ? (p.preview ? { src: p.preview } : p.media.find(m => m.tipo === 'video' && m.loop && /\.(mp4|webm)$/i.test(m.src))) : null;
+const nombreTransicion = p => CONFIG.efectos.transiciones
+  ? `style="view-transition-name: obra-${proyectos.indexOf(p)}"` : '';
+const videoPortada = p => {
+  const v = preview(p);
+  return v ? `<video class="preview-video" data-src="${esc(v.src)}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>` : '';
+};
+
 // ---------- Vistas ----------
 
 // Portada: nombre, bio y una fila por proyecto (título, año, texto corto, portada).
@@ -47,7 +59,7 @@ function vistaInicio() {
     <section class="trabajos" aria-labelledby="titulo-trabajos"><div class="seccion-titulo"><h2 id="titulo-trabajos">Trabajos seleccionados</h2></div>
     <div class="filas">${proyectos.map((p, i) => `
       <a class="fila" href="#/${esc(p.slug)}">
-        <div class="fila-img">${p.portada ? `<img src="${esc(p.portada)}" alt="" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : `<div class="sin-portada"><span>${esc(p.titulo)}</span></div>`}</div>
+        <div class="fila-img" ${nombreTransicion(p)}>${p.portada ? `<img src="${esc(p.portada)}" alt="" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : `<div class="sin-portada"><span>${esc(p.titulo)}</span></div>`}${videoPortada(p)}</div>
         <div class="fila-texto">
           <h2>${esc(p.titulo)}</h2>
           ${p.anio ? `<span class="anio">${esc(p.anio)}</span>` : ''}
@@ -61,8 +73,12 @@ function vistaInfo() {
   app.innerHTML = `<article class="proyecto info">
     <a class="volver" href="#/">← Volver a los trabajos</a>
     <h1>Sobre mí</h1>
-    <p class="lead">${esc(CONFIG.sobreMi.intro)}</p>
-    <div class="info-texto">${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
+    <div class="info-presentacion">
+      <figure class="info-retrato"><img src="${esc(CONFIG.sobreMi.foto)}" alt="Retrato de ${esc(CONFIG.nombre)}" decoding="async"></figure>
+      <div><p class="lead">${esc(CONFIG.sobreMi.intro)}</p>
+        <div class="info-texto">${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
+      </div>
+    </div>
     <section class="info-areas" aria-labelledby="titulo-areas"><h2 id="titulo-areas">Áreas de trabajo</h2>
       <dl>${CONFIG.sobreMi.areas.map(a => `<div><dt>${esc(a.titulo)}</dt><dd>${esc(a.texto)}</dd></div>`).join('')}</dl>
     </section>
@@ -100,9 +116,13 @@ function navegar() {
     return;
   }
   const slug = location.hash.replace(/^#\/?/, '');
-  slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
-  scrollTo(0, 0);
-  observarRevelado(app);
+  cambiarVista(() => {
+    limpiarVista();
+    slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
+    scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    observarRevelado(app);
+    limpiarVista = iniciarEfectosVista(app, CONFIG.efectos);
+  }, CONFIG.efectos.transiciones);
 }
 
 // Clic en una foto -> se amplía; clic de nuevo (o Esc) -> se cierra.
@@ -126,6 +146,10 @@ async function iniciar() {
   }
   initEfectos(CONFIG.efectos);
   addEventListener('hashchange', navegar);
+  matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', () => {
+    limpiarVista();
+    limpiarVista = iniciarEfectosVista(app, CONFIG.efectos);
+  });
   if (location.hash === '#contacto') vistaInicio();
   navegar();
 }

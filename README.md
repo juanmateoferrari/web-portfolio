@@ -46,7 +46,24 @@ Si el servidor ya estaba abierto, agregar la foto por sí solo no actualiza `dat
 Sin portada explícita se usa la primera foto; si no hay fotos, aparece una tarjeta tipográfica.
 Las portadas se recortan en proporción 4:3: conviene dejar el motivo principal cerca del centro.
 
+## Efectos opcionales
+En `js/config.js`, dentro de `efectos`, cambiá `true` por `false` y recargá para desactivar cada efecto:
+- `portadasVideo`: la portada reproduce `previews/portada.mp4` dentro del proyecto, si existe; en caso contrario usa el primer `loop-*.mp4` o `loop-*.webm`. Se activa al pasar el mouse o enfocar con el teclado. En celular se reproduce una sola portada visible a la vez. Sin video compatible se mantiene la foto.
+- `transiciones`: la portada se amplía al abrir el proyecto y se reduce al volver. Si el navegador no permite esa transición, se usa una entrada suave.
+- `trama`: puntos interactivos detrás de tu nombre, sin animación continua en reposo.
+
+Los tres respetan la preferencia de movimiento reducido del dispositivo. Los previews se pausan al salir de pantalla, cambiar de sección u ocultar la pestaña. Si la reproducción automática está bloqueada, se conserva la imagen de portada.
+
 ## Publicar
+Las fotos y los videos se optimizaron conservando las rutas y la duración de los videos de galería.
+Los clips `proyectos/<nombre>/previews/portada.mp4` son versiones de seis segundos para el inicio; no aparecen duplicados en las galerías.
+Los bucles de las galerías se cargan al entrar en pantalla y se pausan al salir o al ocultar la pestaña. Con movimiento reducido se ofrecen controles manuales.
+
+El respaldo previo a esta optimización está fuera del sitio, en `../backups/portfolio-20261112-143219/sitio-original.zip`.
+Incluye los archivos del sitio excepto `.git`. El manifiesto de esa carpeta contiene sus tamaños y hashes SHA-256 verificados.
+Para recuperar una foto o video, extraé el ZIP en otra carpeta y copiá el archivo deseado respetando su ruta.
+No subas `backups` ni `video-tools` al hosting; solo se publica `web-portfolio`.
+
 Subí la carpeta a GitHub y conectala en Netlify (el comando de build ya está en netlify.toml).
 Videos pesados: mejor YouTube/Vimeo con "embeds" que archivos en la carpeta.
 Comprimí las fotos (ancho máx. ~2000 px) antes de subirlas.

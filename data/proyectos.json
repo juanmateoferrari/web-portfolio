@@ -1,7 +1,7 @@
 [
   {
     "slug": "mapping-dinamico",
-    "titulo": "Mapping dinámico",
+    "titulo": "Mapping dinámico - FING/EMAD",
     "anio": "",
     "orden": 1,
     "oculto": false,
@@ -16,12 +16,20 @@
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "proyectos/mapping-dinamico/portada.png",
-    "media": []
+    "portada": "proyectos/mapping-dinamico/portada.webp",
+    "preview": "proyectos/mapping-dinamico/previews/portada.mp4",
+    "media": [
+      {
+        "src": "proyectos/mapping-dinamico/loop-emad.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      }
+    ]
   },
   {
     "slug": "chiara",
-    "titulo": "Escenografía para Chiara Scanzerra",
+    "titulo": "Chiara - Magnolio Sala",
     "anio": "2025",
     "orden": 2,
     "oculto": false,
@@ -36,6 +44,7 @@
     "ingenieril": [],
     "creativa": [],
     "portada": "proyectos/chiara/portada.jpg",
+    "preview": "proyectos/chiara/previews/portada.mp4",
     "media": [
       {
         "src": "proyectos/chiara/68d06786-028a-4b4c-90b4-719852f94f55_rw_1920.jpg",
@@ -56,12 +65,6 @@
         "portada": false
       },
       {
-        "src": "proyectos/chiara/aa.jpg",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
-      {
         "src": "proyectos/chiara/f0816081-5af7-4d3e-8f33-1a4af0752143_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
@@ -69,12 +72,6 @@
       },
       {
         "src": "proyectos/chiara/loop-chiara1%20(1).mp4",
-        "tipo": "video",
-        "loop": true,
-        "portada": false
-      },
-      {
-        "src": "proyectos/chiara/loop-chiara1%20(2).mp4",
         "tipo": "video",
         "loop": true,
         "portada": false
@@ -92,12 +89,6 @@
         "portada": false
       },
       {
-        "src": "proyectos/chiara/loop-chiara1%20(5).mp4",
-        "tipo": "video",
-        "loop": true,
-        "portada": false
-      },
-      {
         "src": "proyectos/chiara/loop-chiara2.mp4",
         "tipo": "video",
         "loop": true,
@@ -107,7 +98,7 @@
   },
   {
     "slug": "idm",
-    "titulo": "Instalación interactiva",
+    "titulo": "Instalación interactiva - Ingeniería DeMuestra",
     "anio": "2025",
     "orden": 3,
     "oculto": false,
@@ -121,12 +112,32 @@
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "",
-    "media": []
+    "portada": "proyectos/idm/portada.webp",
+    "preview": "",
+    "media": [
+      {
+        "src": "proyectos/idm/Estructura-idm.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/Pantalla-idm.png",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/idm/sistema-idm-para-introduccion.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      }
+    ]
   },
   {
     "slug": "lamparas-ceramica",
-    "titulo": "Luminarias de cerámica",
+    "titulo": "Luminarias en cerámica",
     "anio": "2024-2025",
     "orden": 4,
     "oculto": false,
@@ -153,6 +164,7 @@
       "Diseño de la atmósfera lumínica de cada pieza"
     ],
     "portada": "proyectos/lamparas-ceramica/portada.jpg",
+    "preview": "",
     "media": [
       {
         "src": "proyectos/lamparas-ceramica/DSC_7319.jpg",
@@ -230,7 +242,7 @@
   },
   {
     "slug": "visuales-sprlcl",
-    "titulo": "Selección de visuales",
+    "titulo": "Mapping - Superlocal",
     "anio": "",
     "orden": 5,
     "oculto": false,
@@ -242,8 +254,34 @@
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "",
-    "media": []
+    "portada": "proyectos/visuales-sprlcl/portada.png",
+    "preview": "",
+    "media": [
+      {
+        "src": "proyectos/visuales-sprlcl/aa.png",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152022.png",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.png",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152105.png",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      }
+    ]
   },
   {
     "slug": "visuales-silvia-ana",
@@ -260,6 +298,7 @@
     "ingenieril": [],
     "creativa": [],
     "portada": "proyectos/visuales-silvia-ana/portada.JPG",
+    "preview": "proyectos/visuales-silvia-ana/previews/portada.mp4",
     "media": [
       {
         "src": "proyectos/visuales-silvia-ana/DSC02584.JPG",

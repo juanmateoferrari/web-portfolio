@@ -5,6 +5,7 @@ export const CONFIG = {
   nombre: 'Juan Mateo Ferrari',
   bio: 'Ingeniero en Sistemas de Comunicación, Udelar.\nEscenografía, luz e instalaciones interactivas.',
   sobreMi: {                       // presentación de la sección Sobre mí
+    foto: 'img/f4bc4094-4b11-41da-bad0-e0839c3f8106.JPG',
     intro: 'Soy Juan Mateo Ferrari, ingeniero en Sistemas de Comunicación por la Udelar. Mi trabajo cruza la ingeniería con la escenografía, la luz y la creación de objetos e instalaciones interactivas.',
     parrafos: [
       'Me interesa conectar lo físico y lo digital: construir estructuras, diseñar circuitos y programar sistemas que transforman la luz, la imagen y el sonido. En mis proyectos conviven el trabajo manual, la electrónica y la programación.',
@@ -26,9 +27,12 @@ export const CONFIG = {
     creativa: 'Lado creativo',
   },
   efectos: {                        // true / false para activar o apagar
+    portadasVideo: true, // video al pasar el mouse; en celular, al entrar en pantalla
+    transiciones: true, // ampliación de portada al entrar y volver de un proyecto
+    trama: false,        // puntos que responden al cursor detrás del nombre
     luz: true,        // foco de luz que sigue al mouse
-    revelado: true,   // las fotos/videos se "escanean" al entrar en pantalla
+    revelado: false,   // las fotos/videos se "escanean" al entrar en pantalla
     parallax: true,   // las portadas se desplazan a distinta velocidad
-    progreso: true,   // barra fina de avance arriba
+    progreso: false,   // barra fina de avance arriba
   },
 };

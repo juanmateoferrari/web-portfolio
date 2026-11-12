@@ -58,6 +58,7 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
     catch (err) { console.error(`info.json inválido en ${e.name}: ${err.message}`); }
     const m = medios(d);
     const portada = m.find(x => x.portada) || m.find(x => x.tipo === 'imagen');
+    const preview = path.join(d, 'previews', 'portada.mp4');
     return {
       slug: e.name,
       titulo: info.titulo || e.name,
@@ -73,6 +74,7 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
       ingenieril: lineas(leer(d, 'ingenieril.txt')),
       creativa: lineas(leer(d, 'creativa.txt')),
       portada: portada ? portada.src : '',
+      preview: fs.existsSync(preview) ? path.relative(RAIZ, preview).split(path.sep).map(encodeURIComponent).join('/') : '',
       media: m.filter(x => !x.portada),
     };
   })
