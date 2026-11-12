@@ -19,7 +19,7 @@ export const CONFIG = {
     ],
   },
   contacto: [                       // links del pie de página
-    { texto: 'Email', url: 'mailto:juanmaferra2000@gmail.com' },
+    { texto: 'Mail', url: 'mailto:juanmaferra2000@gmail.com' },
     { texto: 'Instagram', url: 'https://instagram.com/juan.mateo.ferrari' },
   ],
   etiquetas: {                      // títulos de las dos listas de cada proyecto
