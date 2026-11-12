@@ -9,8 +9,8 @@ export const CONFIG = {
     intro: 'Soy Juan Mateo Ferrari, ingeniero en Sistemas de Comunicación por la Udelar. Mi trabajo cruza la ingeniería con la escenografía, la luz y la creación de objetos e instalaciones interactivas.',
     parrafos: [
       'Me interesa conectar lo físico y lo digital: construir estructuras, diseñar circuitos y programar sistemas que transforman la luz, la imagen y el sonido. En mis proyectos conviven el trabajo manual, la electrónica y la programación.',
-      'Esa búsqueda toma distintas formas: un sistema de mapping que sigue a un objeto en movimiento, una instalación donde las manos del público modifican luces y música, o una escenografía con iluminación LED programada.',
-      'También desarrollo lámparas de cerámica hechas a mano, integrando el circuito y el recorrido de la luz desde el diseño de la pieza. La forma, los materiales y la técnica se piensan juntos.',
+      // 'Esa búsqueda toma distintas formas: un sistema de mapping que sigue a un objeto en movimiento, una instalación donde las manos del público modifican luces y música, o una escenografía con iluminación LED programada.',
+      // 'También desarrollo lámparas de cerámica hechas a mano, integrando el circuito y el recorrido de la luz desde el diseño de la pieza. La forma, los materiales y la técnica se piensan juntos.',
     ],
     areas: [
       { titulo: 'Escenografía e iluminación', texto: 'Diseño y construcción de estructuras e integración de iluminación LED para espacios escénicos.' },
