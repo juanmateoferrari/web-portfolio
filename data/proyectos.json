@@ -47,12 +47,6 @@
     "preview": "proyectos/chiara/previews/portada.mp4",
     "media": [
       {
-        "src": "proyectos/chiara/68d06786-028a-4b4c-90b4-719852f94f55_rw_1920.jpg",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
-      {
         "src": "proyectos/chiara/93c996cb-9288-4a42-95a6-56a28c6af9eb_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
@@ -60,6 +54,12 @@
       },
       {
         "src": "proyectos/chiara/875ddf70-08c6-4624-b808-76dca64ccd43_rw_1920.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/aa.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false
@@ -112,7 +112,7 @@
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "proyectos/idm/portada.webp",
+    "portada": "proyectos/idm/portada.jpg",
     "preview": "",
     "media": [
       {
@@ -162,6 +162,12 @@
         "tipo": "imagen",
         "loop": false,
         "portada": false
+      },
+      {
+        "src": "proyectos/idm/unnamed.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
       }
     ]
   },
@@ -196,6 +202,12 @@
     "portada": "proyectos/lamparas-ceramica/portada.jpg",
     "preview": "",
     "media": [
+      {
+        "src": "proyectos/lamparas-ceramica/aa.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7319.jpg",
         "tipo": "imagen",
