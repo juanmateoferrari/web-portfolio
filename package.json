@@ -1,0 +1,2 @@
+{ "name": "portfolio", "private": true,
+  "scripts": { "scan": "node scripts/scan.js", "start": "node scripts/scan.js && npx serve ." } }

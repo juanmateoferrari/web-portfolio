@@ -1,0 +1,326 @@
+[
+  {
+    "slug": "mapping-dinamico",
+    "titulo": "Mapping dinámico",
+    "anio": "",
+    "orden": 1,
+    "oculto": false,
+    "equipo": "con Franco Berrutti y Silvina Datz",
+    "tags": [
+      "Proyecto final de carrera",
+      "Udelar"
+    ],
+    "columnas": 2,
+    "embeds": [],
+    "corto": "Proyecto final de carrera desarrollado junto a Franco Berrutti y Silvina Datz en el Instituto de Ingeniería Eléctrica (Udelar), situado en la intersección entre la ingeniería y la creación artística. Diseñamos un sistema de mapping dinámico capaz de lograr que la imagen proyectada siga en tiempo real a un objeto en movimiento, pensado como herramienta para las artes escénicas.",
+    "largo": [],
+    "ingenieril": [],
+    "creativa": [],
+    "portada": "proyectos/mapping-dinamico/portada.png",
+    "media": []
+  },
+  {
+    "slug": "chiara",
+    "titulo": "Escenografía para Chiara Scanzerra",
+    "anio": "2025",
+    "orden": 2,
+    "oculto": false,
+    "equipo": "grdn, manuel dubra, juan proto y sol peluffo",
+    "tags": [
+      "Magnolio Sala"
+    ],
+    "columnas": 2,
+    "embeds": [],
+    "corto": "Diseño y construcción de la escenografía y la iluminación para el concierto de Chiara Scanzerra en Magnolio Sala, realizado en equipo en julio de 2025. El proyecto combinó lo manual, lo electrónico y lo digital, desde la construcción de las estructuras hasta la programación de los efectos de más de 1000 luces LED.",
+    "largo": [],
+    "ingenieril": [],
+    "creativa": [],
+    "portada": "proyectos/chiara/portada.jpg",
+    "media": [
+      {
+        "src": "proyectos/chiara/68d06786-028a-4b4c-90b4-719852f94f55_rw_1920.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/93c996cb-9288-4a42-95a6-56a28c6af9eb_rw_1920.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/875ddf70-08c6-4624-b808-76dca64ccd43_rw_1920.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/aa.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/f0816081-5af7-4d3e-8f33-1a4af0752143_rw_1920.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/loop-chiara1%20(1).mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/loop-chiara1%20(2).mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/loop-chiara1%20(3).mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/loop-chiara1%20(4).mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/loop-chiara1%20(5).mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/chiara/loop-chiara2.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      }
+    ]
+  },
+  {
+    "slug": "idm",
+    "titulo": "Instalación interactiva",
+    "anio": "2025",
+    "orden": 3,
+    "oculto": false,
+    "equipo": "con Franco Berrutti y Silvina Datz",
+    "tags": [
+      "Ingeniería deMuestra"
+    ],
+    "columnas": 2,
+    "embeds": [],
+    "corto": "Instalación interactiva presentada en Ingeniería deMuestra (octubre de 2025) junto a Franco Berrutti y Silvina Datz. Frente a una estructura con siete tiras de luces LED, el público mueve la luz con sus manos y transforma en tiempo real tanto las luces como la música que suena en el espacio.",
+    "largo": [],
+    "ingenieril": [],
+    "creativa": [],
+    "portada": "",
+    "media": []
+  },
+  {
+    "slug": "lamparas-ceramica",
+    "titulo": "Luminarias de cerámica",
+    "anio": "2024-2025",
+    "orden": 4,
+    "oculto": false,
+    "equipo": "",
+    "tags": [],
+    "columnas": 2,
+    "embeds": [],
+    "corto": "Serie de lámparas que combinan cerámica e iluminación LED, surgidas de una búsqueda por integrar los procesos manuales de la cerámica con la ingeniería y los conocimientos técnicos. Cada pieza se diseña, modela y esmalta a mano, e incorpora un circuito que permite regular el color de la luz.",
+    "largo": [
+      "El proceso comienza con el diseño del cuerpo de la lámpara en cerámica, planificando desde el inicio por dónde va a recorrer el cableado, de modo que la parte técnica quede integrada a la forma de la pieza y no agregada a posteriori. Una vez modelada, la pieza se hornea y se eligen los esmaltes y óxidos que definen su terminación final.",
+      "A continuación se realiza todo el cableado y se define el color de la luz que va a emitir cada lámpara. Mediante uno o más potenciómetros, el color se vuelve regulable, permitiendo ajustar la atmósfera que genera la pieza según el momento o el espacio en el que se encuentre.",
+      "Las luces se orientan hacia el interior de la pieza, de modo que la luz no se recibe de forma directa, sino reflejada y difusa a través de la cerámica. Así, la luz se percibe de forma suave y envolvente, generando un ambiente íntimo en el espacio donde se encuentra la lámpara."
+    ],
+    "ingenieril": [
+      "Diseño y armado del circuito eléctrico",
+      "Integración de iluminación LED",
+      "Regulación del color de la luz mediante potenciómetros",
+      "Planificación del recorrido del cableado dentro de la pieza"
+    ],
+    "creativa": [
+      "Diseño y modelado en cerámica técnica: placas",
+      "Horneado y selección de esmaltes y óxidos",
+      "Diseño de objeto: integración de forma y función",
+      "Diseño de la atmósfera lumínica de cada pieza"
+    ],
+    "portada": "proyectos/lamparas-ceramica/portada.jpg",
+    "media": [
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7319.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7321.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7440.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7478.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7525.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7539.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7563.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7637.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7644.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7662.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7671.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/lamparas-ceramica/DSC_7763.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      }
+    ]
+  },
+  {
+    "slug": "visuales-sprlcl",
+    "titulo": "Selección de visuales",
+    "anio": "",
+    "orden": 5,
+    "oculto": false,
+    "equipo": "",
+    "tags": [],
+    "columnas": 3,
+    "embeds": [],
+    "corto": "",
+    "largo": [],
+    "ingenieril": [],
+    "creativa": [],
+    "portada": "",
+    "media": []
+  },
+  {
+    "slug": "visuales-silvia-ana",
+    "titulo": "Silvia Ana - Inmigrantes",
+    "anio": 2025,
+    "orden": 5,
+    "oculto": false,
+    "equipo": "",
+    "tags": [],
+    "columnas": 3,
+    "embeds": [],
+    "corto": "",
+    "largo": [],
+    "ingenieril": [],
+    "creativa": [],
+    "portada": "proyectos/visuales-silvia-ana/portada.JPG",
+    "media": [
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02584.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02616.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02624.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02660.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02667.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02732.JPG",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/DSC02735.jpg",
+        "tipo": "imagen",
+        "loop": false,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/loop-bajar%20la%20luna.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/loop-caleidoscopio.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-silvia-ana/loop-creo%20que%20te%20amo.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      }
+    ]
+  }
+]

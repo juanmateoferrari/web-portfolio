@@ -1,0 +1,4 @@
+# Netlify corre el escáner en cada deploy y publica la carpeta raíz.
+[build]
+  command = "node scripts/scan.js"
+  publish = "."
