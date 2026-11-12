@@ -34,8 +34,14 @@ const embed = e => {
 const lista = (titulo, items) => items.length
   ? `<div><h3>${esc(titulo)}</h3><ul>${items.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>` : '';
 
-const pie = () => `<footer class="pie" id="contacto"><span>¿Creamos algo juntos?</span>${CONFIG.contacto
-  .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('')}</footer>`;
+const enlacesContacto = () => CONFIG.contacto
+  .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('');
+
+const navegacion = etiqueta => `<nav class="navegacion" aria-label="${etiqueta}">
+  <a href="#/info">Sobre mí</a><div class="enlaces-contacto">${enlacesContacto()}</div>
+</nav>`;
+
+const pie = () => `<footer class="pie" id="contacto">${navegacion('Navegación del pie')}</footer>`;
 
 // Solo los loop-* MP4/WebM se usan como previews; nunca cargan hasta reproducirse.
 const preview = p => CONFIG.efectos.portadasVideo && !matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -54,7 +60,7 @@ function vistaInicio() {
   document.title = CONFIG.nombre;
   app.innerHTML = `
     <header class="cabecera">
-      <nav aria-label="Navegación principal"><a href="#/info">Sobre mí</a><a class="contacto-link" href="#contacto">Contacto <span aria-hidden="true">↗</span></a></nav></header>
+      ${navegacion('Navegación principal')}</header>
     <section class="hero"><h1>${esc(CONFIG.nombre)}</h1><p>${esc(CONFIG.bio)}</p></section>
     <section class="trabajos" aria-labelledby="titulo-trabajos"><div class="seccion-titulo"><h2 id="titulo-trabajos">Trabajos seleccionados</h2></div>
     <div class="filas">${proyectos.map((p, i) => `
