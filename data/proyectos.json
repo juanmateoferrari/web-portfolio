@@ -2,7 +2,7 @@
   {
     "slug": "mapping-dinamico",
     "titulo": "Mapping dinámico - FING/EMAD",
-    "anio": "",
+    "anio": 2026,
     "orden": 1,
     "oculto": false,
     "equipo": "con Franco Berrutti y Silvina Datz",
@@ -285,32 +285,20 @@
   {
     "slug": "visuales-sprlcl",
     "titulo": "Mapping - Superlocal",
-    "anio": "",
+    "anio": 2026,
     "orden": 5,
     "oculto": false,
     "equipo": "",
     "tags": [],
     "columnas": 3,
     "embeds": [],
-    "corto": "",
+    "corto": "Visuales y mapping realizados para el brindis de apertura de Superlocal, festival internacional de diseño, a partir de la identidad gráfica creada por el estudio Atolón de Mororoa.",
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "proyectos/visuales-sprlcl/aa.png",
+    "portada": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.png",
     "preview": "",
     "media": [
-      {
-        "src": "proyectos/visuales-sprlcl/aa.png",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
-      {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152022.png",
-        "tipo": "imagen",
-        "loop": false,
-        "portada": false
-      },
       {
         "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.png",
         "tipo": "imagen",
@@ -369,12 +357,6 @@
         "src": "proyectos/visuales-sprlcl/loop-IMG_7771.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
-      },
-      {
-        "src": "proyectos/visuales-sprlcl/sprlcl.10.mp4",
-        "tipo": "video",
-        "loop": false,
         "portada": false
       }
     ]
