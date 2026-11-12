@@ -330,33 +330,45 @@
         "portada": false
       },
       {
-        "src": "proyectos/visuales-sprlcl/finales_finales.5.mp4",
-        "tipo": "video",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152724.png",
+        "tipo": "imagen",
         "loop": false,
         "portada": false
       },
       {
-        "src": "proyectos/visuales-sprlcl/finales_finales.10.mp4",
-        "tipo": "video",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152758.png",
+        "tipo": "imagen",
         "loop": false,
         "portada": false
       },
       {
-        "src": "proyectos/visuales-sprlcl/IMG_7765.mp4",
-        "tipo": "video",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152826.png",
+        "tipo": "imagen",
         "loop": false,
         "portada": false
       },
       {
-        "src": "proyectos/visuales-sprlcl/IMG_7770.mp4",
+        "src": "proyectos/visuales-sprlcl/loop-finales_finales.5.mp4",
         "tipo": "video",
-        "loop": false,
+        "loop": true,
         "portada": false
       },
       {
-        "src": "proyectos/visuales-sprlcl/IMG_7771.mp4",
+        "src": "proyectos/visuales-sprlcl/loop-finales_finales.10.mp4",
         "tipo": "video",
-        "loop": false,
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-sprlcl/loop-IMG_7765.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false
+      },
+      {
+        "src": "proyectos/visuales-sprlcl/loop-IMG_7771.mp4",
+        "tipo": "video",
+        "loop": true,
         "portada": false
       },
       {
