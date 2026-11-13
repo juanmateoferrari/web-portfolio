@@ -5,12 +5,12 @@
     "anio": 2026,
     "orden": 1,
     "oculto": false,
-    "equipo": "con Franco Berrutti y Silvina Datz",
+    "equipo": "Franco Berrutti y Silvina Datz",
     "tags": [
       "Proyecto final de carrera",
       "Udelar"
     ],
-    "columnas": 2,
+    "columnas": 1,
     "embeds": [],
     "corto": "Proyecto final de carrera desarrollado junto a Franco Berrutti y Silvina Datz en el Instituto de Ingeniería Eléctrica (Udelar), situado en la intersección entre la ingeniería y la creación artística. Diseñamos un sistema de mapping dinámico capaz de lograr que la imagen proyectada siga en tiempo real a un objeto en movimiento, pensado como herramienta para las artes escénicas.",
     "largo": [],
@@ -23,7 +23,8 @@
         "src": "proyectos/mapping-dinamico/loop-emad.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       }
     ]
   },
@@ -33,7 +34,7 @@
     "anio": "2025",
     "orden": 2,
     "oculto": false,
-    "equipo": "grdn, manuel dubra, juan proto y sol peluffo",
+    "equipo": "grdn, Manuel Dubra, Juan Proto y Sol Peluffo",
     "tags": [
       "Magnolio Sala"
     ],
@@ -50,59 +51,67 @@
         "src": "proyectos/chiara/93c996cb-9288-4a42-95a6-56a28c6af9eb_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/875ddf70-08c6-4624-b808-76dca64ccd43_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/aa.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/f0816081-5af7-4d3e-8f33-1a4af0752143_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/loop-chiara1%20(1).mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/loop-chiara1%20(3).mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/loop-chiara1%20(4).mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/chiara/loop-chiara2.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       }
     ]
   },
   {
     "slug": "idm",
-    "titulo": "Instalación interactiva - Ingeniería DeMuestra",
+    "titulo": "Instalación interactiva - Ingeniería deMuestra",
     "anio": "2025",
     "orden": 3,
     "oculto": false,
-    "equipo": "con Franco Berrutti y Silvina Datz",
+    "equipo": "Franco Berrutti y Silvina Datz",
     "tags": [
       "Ingeniería deMuestra"
     ],
@@ -119,55 +128,64 @@
         "src": "proyectos/idm/IMG_0758.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0760.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0766.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0788.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0792.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0801.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0802.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/IMG_0841.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/idm/unnamed.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       }
     ]
   },
@@ -206,79 +224,92 @@
         "src": "proyectos/lamparas-ceramica/aa.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7319.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7321.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7440.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7478.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7525.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7539.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7563.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7637.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7644.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7662.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7671.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/lamparas-ceramica/DSC_7763.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       }
     ]
   },
@@ -296,62 +327,71 @@
     "largo": [],
     "ingenieril": [],
     "creativa": [],
-    "portada": "proyectos/visuales-sprlcl/portada.png",
-    "preview": "",
+    "portada": "proyectos/visuales-sprlcl/portada.jpg",
+    "preview": "proyectos/visuales-sprlcl/previews/portada.mp4",
     "media": [
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.png",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152105.png",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152105.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152724.png",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152724.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152758.png",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152758.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152826.png",
+        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152826.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-sprlcl/loop-finales_finales.5.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-sprlcl/loop-finales_finales.10.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-sprlcl/loop-IMG_7765.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-sprlcl/loop-IMG_7771.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       }
     ]
   },
@@ -361,14 +401,26 @@
     "anio": 2025,
     "orden": 5,
     "oculto": false,
-    "equipo": "",
+    "equipo": "Isa Epstein (exploración visual y dibujos)",
     "tags": [],
     "columnas": 3,
     "embeds": [],
-    "corto": "",
-    "largo": [],
-    "ingenieril": [],
-    "creativa": [],
+    "corto": "Escenografía, visuales y operación de luces para el concierto de Silvia Ana en Inmigrantes, en noviembre de 2025. Una estructura de telas traslúcidas y proyecciones por mapping transformó un espacio sin pantallas en una superficie escénica.",
+    "largo": [
+      "El lugar no tenía pantallas ni superficies lisas para proyectar. La solución fue construir una estructura con varias capas de tela traslúcida, colgar un proyector y ajustar el mapping para que la imagen coincidiera con la superficie elegida.",
+      "Junto a Isa Epstein escuchamos las canciones y exploramos qué transmitía cada una y qué estética podía acompañarlas. A partir de dibujos con acrílico y de las texturas que aparecían al aplastarlo, creamos pequeñas animaciones.",
+      "En TouchDesigner combiné ese material con videos de fondo y generé clips para cada tema, explorando el color y los modos de mezcla. Después uní y edité esos fragmentos en videos de entre 60 y 70 segundos por canción. Además de la escenografía y las visuales, operé las luces durante el concierto."
+    ],
+    "ingenieril": [
+      "Montaje del proyector y ajuste del mapping sobre las capas de tela.",
+      "Composición y procesamiento de las imágenes en TouchDesigner.",
+      "Operación de luces durante el concierto."
+    ],
+    "creativa": [
+      "Diseño y construcción de la escenografía con telas traslúcidas.",
+      "Exploración de la estética de cada canción junto a Isa Epstein.",
+      "Creación y edición de visuales a partir de dibujos con acrílico y videos."
+    ],
     "portada": "proyectos/visuales-silvia-ana/portada.JPG",
     "preview": "proyectos/visuales-silvia-ana/previews/portada.mp4",
     "media": [
@@ -376,61 +428,71 @@
         "src": "proyectos/visuales-silvia-ana/DSC02584.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/DSC02616.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/DSC02624.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/DSC02660.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/DSC02667.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/DSC02732.JPG",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/DSC02735.jpg",
         "tipo": "imagen",
         "loop": false,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/loop-bajar%20la%20luna.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/loop-caleidoscopio.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       },
       {
         "src": "proyectos/visuales-silvia-ana/loop-creo%20que%20te%20amo.mp4",
         "tipo": "video",
         "loop": true,
-        "portada": false
+        "portada": false,
+        "alt": ""
       }
     ]
   }

@@ -1,1 +1,11 @@
-{ "titulo": "Mapping dinámico - FING/EMAD",  "anio":2026,  "orden": 1, "equipo": "con Franco Berrutti y Silvina Datz", "tags": ["Proyecto final de carrera", "Udelar"], "columnas": 2 }
+{
+  "titulo": "Mapping dinámico - FING/EMAD",
+  "anio": 2026,
+  "orden": 1,
+  "equipo": "Franco Berrutti y Silvina Datz",
+  "tags": [
+    "Proyecto final de carrera",
+    "Udelar"
+  ],
+  "columnas": 1
+}

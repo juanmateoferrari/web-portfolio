@@ -4,12 +4,18 @@
 //         #/nombre-carpeta -> página de ese proyecto
 // ============================================================
 import { CONFIG } from './config.js';
+import { abrirInstagramEnIPhone } from './contact.js';
 import { initEfectos, observarRevelado } from './effects.js';
 import { iniciarEfectosVista, cambiarVista } from './interactive.js';
 
 const app = document.getElementById('app');
 const visor = document.getElementById('visor');
 let proyectos = [];
+const base = new URL('.', document.baseURI);
+const ruta = () => location.hash.startsWith('#/') ? location.hash.slice(2) : location.pathname.slice(base.pathname.length).replace(/^trabajos\//, '').replace(/\/$/, '');
+let actual = ruta();
+const posiciones = new Map();
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 let limpiarVista = () => {};
 
 // Escapa texto para que nunca se interprete como HTML.
@@ -19,9 +25,9 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g,
 // ---------- Piezas reutilizables ----------
 
 // Una foto/gif o un video. Videos "loop-*" se reproducen solos y mudos; el resto tiene controles.
-const medio = m => m.tipo === 'video'
+const medio = (m, i, p) => m.tipo === 'video'
   ? `<figure class="medio"><video ${m.loop ? `data-gallery-loop data-src="${esc(m.src)}" muted loop playsinline` : `src="${esc(m.src)}" controls`} preload="none"></video></figure>`
-  : `<figure class="medio"><img src="${m.src}" alt="" loading="lazy" data-zoom></figure>`;
+  : `<figure class="medio"><img src="${esc(m.src)}" alt="${esc(m.alt || `${p.titulo}, registro ${i + 1}`)}" loading="lazy" data-zoom tabindex="0" role="button" aria-label="Ampliar: ${esc(m.alt || `${p.titulo}, registro ${i + 1}`)}"></figure>`;
 
 // Video incrustado de YouTube o Vimeo (se define en info.json -> embeds).
 const embed = e => {
@@ -38,14 +44,14 @@ const enlacesContacto = () => CONFIG.contacto
   .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('');
 
 const navegacion = etiqueta => `<nav class="navegacion" aria-label="${etiqueta}">
-  <a href="#/info">Sobre mí</a><div class="enlaces-contacto">${enlacesContacto()}</div>
+  <a href="info/">Sobre mí</a><div class="enlaces-contacto">${enlacesContacto()}</div>
 </nav>`;
 
 const pie = () => `<footer class="pie" id="contacto">${navegacion('Navegación del pie')}</footer>`;
 
 // Solo los loop-* MP4/WebM se usan como previews; nunca cargan hasta reproducirse.
 const preview = p => CONFIG.efectos.portadasVideo && !matchMedia('(prefers-reduced-motion: reduce)').matches
-  ? (p.preview ? { src: p.preview } : p.media.find(m => m.tipo === 'video' && m.loop && /\.(mp4|webm)$/i.test(m.src))) : null;
+  ? (p.preview && matchMedia('(hover: hover) and (pointer: fine)').matches ? { src: p.preview } : null) : null;
 const nombreTransicion = p => CONFIG.efectos.transiciones
   ? `style="view-transition-name: obra-${proyectos.indexOf(p)}"` : '';
 const videoPortada = p => {
@@ -64,8 +70,8 @@ function vistaInicio() {
     <section class="hero"><h1>${esc(CONFIG.nombre)}</h1><p>${esc(CONFIG.bio)}</p></section>
     <section class="trabajos" aria-labelledby="titulo-trabajos"><div class="seccion-titulo"><h2 id="titulo-trabajos">Trabajos seleccionados</h2></div>
     <div class="filas">${proyectos.map((p, i) => `
-      <a class="fila" href="#/${esc(p.slug)}">
-        <div class="fila-img" ${nombreTransicion(p)}>${p.portada ? `<img src="${esc(p.portada)}" alt="" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : `<div class="sin-portada"><span>${esc(p.titulo)}</span></div>`}${videoPortada(p)}</div>
+      <a class="fila" href="trabajos/${esc(p.slug)}/">
+        <div class="fila-img" ${nombreTransicion(p)}>${p.portada ? `<img src="${esc(p.portada)}" alt="${esc(p.titulo)}" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : `<div class="sin-portada"><span>${esc(p.titulo)}</span></div>`}${videoPortada(p)}</div>
         <div class="fila-texto">
           <h2>${esc(p.titulo)}</h2>
           ${p.anio ? `<span class="anio">${esc(p.anio)}</span>` : ''}
@@ -77,7 +83,7 @@ function vistaInicio() {
 function vistaInfo() {
   document.title = `Sobre mí | ${CONFIG.nombre}`;
   app.innerHTML = `<article class="proyecto info">
-    <a class="volver" href="#/">← Volver a los trabajos</a>
+    <a class="volver" href="./">← Volver a los trabajos</a>
     <h1>Sobre mí</h1>
     <figure class="info-retrato" tabindex="0" aria-label="Retrato y presentación de ${esc(CONFIG.nombre)}">
       <img src="${esc(CONFIG.sobreMi.foto)}" alt="Retrato de ${esc(CONFIG.nombre)}" decoding="async">
@@ -89,8 +95,8 @@ function vistaInfo() {
       <div class="areas-carrusel" id="areas-carrusel" role="region" aria-labelledby="titulo-areas" tabindex="0">${CONFIG.sobreMi.areas.map(a => {
         const p = proyectos.find(p => p.slug === a.proyecto);
         const etiqueta = p ? 'a' : 'article';
-        const destino = p ? ` href="#/${esc(p.slug)}" aria-label="${esc(a.titulo)}: ${esc(p.titulo)}"` : '';
-        return `<${etiqueta} class="area-card"${destino}>${p?.portada ? `<img src="${esc(p.portada)}" alt="" loading="lazy" decoding="async">` : ''}<div class="area-card-texto"><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p></div></${etiqueta}>`;
+        const destino = p ? ` href="trabajos/${esc(p.slug)}/" aria-label="${esc(a.titulo)}: ${esc(p.titulo)}"` : '';
+        return `<${etiqueta} class="area-card"${destino}>${p?.portada ? `<img src="${esc(p.portada)}" alt="${esc(p.titulo)}" loading="lazy" decoding="async">` : ''}<div class="area-card-texto"><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p></div></${etiqueta}>`;
       }).join('')}</div>
     </section>
   </article>${pie()}`;
@@ -106,15 +112,15 @@ function vistaProyecto(slug) {
   document.title = `${p.titulo} | ${CONFIG.nombre}`;
   app.innerHTML = `
     <article class="proyecto">
-      <a class="volver" href="#/">Volver</a>
+      <a class="volver" href="./">Volver</a>
       <h1>${esc(p.titulo)}</h1>
       ${meta ? `<p class="meta">${meta}</p>` : ''}
       ${p.corto ? `<p class="lead">${esc(p.corto)}</p>` : ''}
-      <div class="galeria" style="--cols:${p.columnas}">${p.media.map(medio).join('')}</div>
+      <div class="galeria" style="--cols:${Math.min(p.columnas, Math.max(1, p.media.length))}">${p.media.map((m, i) => medio(m, i, p)).join('')}</div>
       ${p.embeds.map(embed).join('')}
       <div class="texto">${p.largo.map(t => `<p>${esc(t)}</p>`).join('')}</div>
       <div class="listas">${lista(CONFIG.etiquetas.ingenieril, p.ingenieril)}${lista(CONFIG.etiquetas.creativa, p.creativa)}</div>
-      <a class="siguiente" href="#/${sig.slug}">Siguiente: ${esc(sig.titulo)}</a>
+      <a class="siguiente" href="trabajos/${esc(sig.slug)}/">Siguiente: ${esc(sig.titulo)}</a>
     </article>${pie()}`;
 }
 
@@ -126,24 +132,61 @@ function navegar() {
     document.getElementById('contacto')?.scrollIntoView();
     return;
   }
-  const slug = location.hash.replace(/^#\/?/, '');
+  const slug = ruta();
+  posiciones.set(actual, scrollY);
+  actual = slug;
+  if (visor.open) visor.close();
   cambiarVista(() => {
     limpiarVista();
     slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
-    scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    const p = proyectos.find(p => p.slug === slug);
+    const descripcion = p?.corto || 'Escenografía, luz, visuales, objetos e instalaciones interactivas.';
+    const url = new URL(slug === 'info' ? 'info/' : p ? `trabajos/${p.slug}/` : './', base);
+    document.querySelector('meta[name="description"]').content = descripcion;
+    document.querySelector('meta[property="og:title"]').content = document.title;
+    document.querySelector('meta[property="og:description"]').content = descripcion;
+    document.querySelector('meta[property="og:url"]').content = url.href;
+    document.querySelector('meta[property="og:image"]').content = new URL(p?.slug === 'mapping-dinamico' ? 'img/social/mapping-dinamico.jpg' : p?.portada || 'proyectos/chiara/portada.jpg', base).href;
+    document.querySelector('meta[property="og:image:alt"]').content = p?.titulo || CONFIG.nombre;
+    document.querySelector('link[rel="canonical"]').href = url.href;
+    scrollTo({ top: posiciones.get(slug) || 0, left: 0, behavior: 'instant' });
     observarRevelado(app);
     limpiarVista = iniciarEfectosVista(app, CONFIG.efectos);
   }, CONFIG.efectos.transiciones);
 }
 
-// Clic en una foto -> se amplía; clic de nuevo (o Esc) -> se cierra.
+// El visor conserva el foco y permite recorrer las fotos con botones y teclado.
+let fotos = [], fotoActual = 0, origenVisor;
+function mostrarFoto(i) {
+  fotoActual = (i + fotos.length) % fotos.length;
+  const foto = fotos[fotoActual];
+  visor.innerHTML = `<button class="visor-cerrar" aria-label="Cerrar">×</button><button class="visor-anterior" aria-label="Foto anterior">←</button><img src="${esc(foto.src)}" alt="${esc(foto.alt)}"><button class="visor-siguiente" aria-label="Foto siguiente">→</button><span class="visor-contador" aria-live="polite">${fotoActual + 1} / ${fotos.length}</span>`;
+}
 app.addEventListener('click', e => {
   if (e.target.matches('[data-zoom]')) {
-    visor.innerHTML = `<img src="${e.target.src}" alt="">`;
-    visor.showModal();
+    fotos = [...app.querySelectorAll('[data-zoom]')]; origenVisor = e.target;
+    mostrarFoto(fotos.indexOf(e.target)); visor.showModal(); visor.querySelector('button').focus();
+    return;
   }
+  const a = e.target.closest('a');
+  if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0 || a.target || a.hasAttribute('download')) return;
+  const url = new URL(a.href);
+  if (abrirInstagramEnIPhone(e, url)) return;
+  if (url.origin !== location.origin || !url.pathname.startsWith(base.pathname) || url.hash) return;
+  e.preventDefault(); history.pushState(null, '', url); navegar();
 });
-visor.addEventListener('click', () => visor.close());
+app.addEventListener('keydown', e => {
+  if (e.target.matches('[data-zoom]') && ['Enter', ' '].includes(e.key)) { e.preventDefault(); e.target.click(); }
+});
+visor.addEventListener('click', e => {
+  if (e.target.closest('.visor-cerrar') || e.target === visor) visor.close();
+  else if (e.target.closest('.visor-anterior')) { mostrarFoto(fotoActual - 1); visor.querySelector('.visor-anterior').focus(); }
+  else if (e.target.closest('.visor-siguiente')) { mostrarFoto(fotoActual + 1); visor.querySelector('.visor-siguiente').focus(); }
+});
+visor.addEventListener('keydown', e => {
+  if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); const clase = document.activeElement.className; mostrarFoto(fotoActual + (e.key === 'ArrowRight' ? 1 : -1)); visor.querySelector(`.${clase}`)?.focus(); }
+});
+visor.addEventListener('close', () => origenVisor?.isConnected && origenVisor.focus({ preventScroll: true }));
 
 async function iniciar() {
   document.documentElement.classList.add('js'); // el CSS oculta los .medio solo si hay JS
@@ -152,11 +195,12 @@ async function iniciar() {
     if (!respuesta.ok) throw new Error('No se pudieron cargar los proyectos');
     proyectos = await respuesta.json();
   } catch {
-    app.innerHTML = '<p class="error">No se encontró data/proyectos.json. Ejecutá: node scripts/scan.js</p>';
+    app.innerHTML = '<p class="error">No pudimos cargar los trabajos. <a href="./">Volvé a intentar</a> o escribime a juanmaferra2000@gmail.com.</p>';
     return;
   }
   initEfectos(CONFIG.efectos);
   addEventListener('hashchange', navegar);
+  addEventListener('popstate', navegar);
   matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', () => {
     limpiarVista();
     limpiarVista = iniciarEfectosVista(app, CONFIG.efectos);

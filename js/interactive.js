@@ -85,6 +85,7 @@ function galeriaVisible(raiz) {
 }
 
 function portadas(raiz) {
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches || navigator.connection?.saveData) return () => {};
   const controller = new AbortController();
   const opciones = { signal: controller.signal };
   const tactil = matchMedia('(hover: none)').matches;

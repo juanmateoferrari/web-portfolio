@@ -75,7 +75,7 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
       creativa: lineas(leer(d, 'creativa.txt')),
       portada: portada ? portada.src : '',
       preview: fs.existsSync(preview) ? path.relative(RAIZ, preview).split(path.sep).map(encodeURIComponent).join('/') : '',
-      media: m.filter(x => !x.portada),
+      media: m.filter(x => !x.portada).map(x => ({ ...x, alt: info.alt?.[decodeURIComponent(x.src.split('/').pop())] || '' })),
     };
   })
   .filter(p => !p.oculto)
@@ -84,3 +84,5 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
 fs.mkdirSync(path.join(RAIZ, 'data'), { recursive: true });
 fs.writeFileSync(path.join(RAIZ, 'data', 'proyectos.json'), JSON.stringify(proyectos, null, 2));
 console.log(`OK: ${proyectos.length} proyectos -> data/proyectos.json`);
+
+require('./pages.js')(proyectos);

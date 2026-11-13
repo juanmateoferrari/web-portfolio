@@ -1,0 +1,5 @@
+El lugar no tenía pantallas ni superficies lisas para proyectar. La solución fue construir una estructura con varias capas de tela traslúcida, colgar un proyector y ajustar el mapping para que la imagen coincidiera con la superficie elegida.
+
+Junto a Isa Epstein escuchamos las canciones y exploramos qué transmitía cada una y qué estética podía acompañarlas. A partir de dibujos con acrílico y de las texturas que aparecían al aplastarlo, creamos pequeñas animaciones.
+
+En TouchDesigner combiné ese material con videos de fondo y generé clips para cada tema, explorando el color y los modos de mezcla. Después uní y edité esos fragmentos en videos de entre 60 y 70 segundos por canción. Además de la escenografía y las visuales, operé las luces durante el concierto.
