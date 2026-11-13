@@ -112,7 +112,7 @@ img, video { display: block; width: 100%; }
 
 /* 6. PIE Y VISOR */
 .pie { padding: 3rem 0 4rem; }
-#visor { max-width: 94vw; max-height: 94vh; padding: 0; border: 0; background: none; }
+#visor { position: fixed; inset: 0; margin: auto; width: fit-content; height: fit-content; max-width: 94vw; max-height: 94vh; padding: 0; border: 0; background: none; }
 #visor::backdrop { background: rgba(8, 8, 9, .92); }
 #visor img { max-height: 94vh; object-fit: contain; cursor: zoom-out; }
 
@@ -135,3 +135,14 @@ img, video { display: block; width: 100%; }
   .preview-video, .trama { display: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
+
+/* Controles del visor: accesibles también desde teclado y pantallas táctiles. */
+#visor { width: 94vw; padding: 3.5rem 3rem 2.5rem; background: #0f1012; color: var(--texto); }
+#visor img { max-height: 77vh; cursor: default; }
+#visor button { position: absolute; border: 1px solid var(--linea); border-radius: 50%; background: var(--fondo); color: var(--texto); width: 44px; height: 44px; cursor: pointer; font-size: 1.5rem; }
+.visor-cerrar { top: .5rem; right: .5rem; }
+.visor-anterior { left: 0; top: 50%; }
+.visor-siguiente { right: 0; top: 50%; }
+.visor-contador { display: block; text-align: center; font-size: .85rem; }
+button:focus-visible, [data-zoom]:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+.texto:empty, .listas:empty { display: none; }

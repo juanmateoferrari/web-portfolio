@@ -1,2 +1,9 @@
-{ "name": "portfolio", "private": true,
-  "scripts": { "scan": "node scripts/scan.js", "start": "node scripts/scan.js && npx serve ." } }
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "scan": "node scripts/scan.js",
+    "start": "node scripts/scan.js && npx serve .",
+    "build": "node scripts/scan.js"
+  }
+}

@@ -1,1 +1,9 @@
-{ "titulo": "Instalación interactiva - Ingeniería DeMuestra", "anio": "2025", "orden": 3, "equipo": "con Franco Berrutti y Silvina Datz", "tags": ["Ingeniería deMuestra"] }
+{
+  "titulo": "Instalación interactiva - Ingeniería deMuestra",
+  "anio": "2025",
+  "orden": 3,
+  "equipo": "Franco Berrutti y Silvina Datz",
+  "tags": [
+    "Ingeniería deMuestra"
+  ]
+}

@@ -20,19 +20,19 @@ export const CONFIG = {
   },
   contacto: [                       // links del pie de página
     { texto: 'Email', url: 'mailto:juanmaferra2000@gmail.com' },
-    { texto: 'Instagram', url: 'https://instagram.com/juan.mateo.ferrari' },
+    { texto: 'Instagram', url: 'https://www.instagram.com/juan.mateo.ferrari/' },
   ],
   etiquetas: {                      // títulos de las dos listas de cada proyecto
     ingenieril: 'Lado ingenieril',
     creativa: 'Lado creativo',
   },
   efectos: {                        // true / false para activar o apagar
-    portadasVideo: true, // video al pasar el mouse; en celular, al entrar en pantalla
+    portadasVideo: true, // preview dedicada al pasar el mouse; sin autoplay en celular
     transiciones: true, // ampliación de portada al entrar y volver de un proyecto
     trama: false,        // puntos que responden al cursor detrás del nombre
     luz: true,        // foco de luz que sigue al mouse
     revelado: false,   // las fotos/videos se "escanean" al entrar en pantalla
-    parallax: true,   // las portadas se desplazan a distinta velocidad
+    parallax: false,   // las portadas se desplazan a distinta velocidad
     progreso: false,   // barra fina de avance arriba
   },
 };

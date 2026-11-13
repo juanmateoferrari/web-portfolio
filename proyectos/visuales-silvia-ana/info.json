@@ -1,1 +1,7 @@
-{ "titulo": "Silvia Ana - Inmigrantes", "anio":2025, "orden": 5, "columnas": 3 }
+{
+  "titulo": "Silvia Ana - Inmigrantes",
+  "anio": 2025,
+  "orden": 5,
+  "columnas": 3,
+  "equipo": "Isa Epstein (exploración visual y dibujos)"
+}

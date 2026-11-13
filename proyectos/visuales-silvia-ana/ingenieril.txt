@@ -1,0 +1,3 @@
+Montaje del proyector y ajuste del mapping sobre las capas de tela.
+Composición y procesamiento de las imágenes en TouchDesigner.
+Operación de luces durante el concierto.
