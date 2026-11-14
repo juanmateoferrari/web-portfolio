@@ -11,6 +11,7 @@ import { iniciarEfectosVista, cambiarVista } from './interactive.js';
 const app = document.getElementById('app');
 const visor = document.getElementById('visor');
 let proyectos = [];
+let primeraVista = true;
 const base = new URL('.', document.baseURI);
 const ruta = () => location.hash.startsWith('#/') ? location.hash.slice(2) : location.pathname.slice(base.pathname.length).replace(/^trabajos\//, '').replace(/\/$/, '');
 let actual = ruta();
@@ -44,14 +45,14 @@ const enlacesContacto = () => CONFIG.contacto
   .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('');
 
 const navegacion = etiqueta => `<nav class="navegacion" aria-label="${etiqueta}">
-  <a href="info/">Sobre mí</a><div class="enlaces-contacto">${enlacesContacto()}</div>
+  <a href="info/">Sobre mí</a><a href="contacto/">Contacto</a>
 </nav>`;
 
 const pie = () => `<footer class="pie" id="contacto">${navegacion('Navegación del pie')}</footer>`;
 
 // Solo los loop-* MP4/WebM se usan como previews; nunca cargan hasta reproducirse.
 const preview = p => CONFIG.efectos.portadasVideo && !matchMedia('(prefers-reduced-motion: reduce)').matches
-  ? (p.preview && matchMedia('(hover: hover) and (pointer: fine)').matches ? { src: p.preview } : null) : null;
+  ? (p.preview ? { src: p.preview } : null) : null;
 const nombreTransicion = p => CONFIG.efectos.transiciones
   ? `style="view-transition-name: obra-${proyectos.indexOf(p)}"` : '';
 const videoPortada = p => {
@@ -102,6 +103,16 @@ function vistaInfo() {
   </article>${pie()}`;
 }
 
+function vistaContacto() {
+  document.title = `Contacto | ${CONFIG.nombre}`;
+  app.innerHTML = `<article class="proyecto contacto">
+    <a class="volver" href="./">Volver a los trabajos</a>
+    <h1>Contacto</h1>
+    <p class="lead">Podés escribirme por mail o instagram :)</p>
+    <div class="contacto-links">${enlacesContacto()}</div>
+  </article>${pie()}`;
+}
+
 // Proyecto: encabezado, galería (columnas configurables), texto largo,
 // las dos listas, videos incrustados y link al siguiente.
 function vistaProyecto(slug) {
@@ -138,10 +149,11 @@ function navegar() {
   if (visor.open) visor.close();
   cambiarVista(() => {
     limpiarVista();
-    slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
+    slug === 'contacto' ? vistaContacto() : slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
+    document.documentElement.classList.remove('cargando');
     const p = proyectos.find(p => p.slug === slug);
     const descripcion = p?.corto || 'Escenografía, luz, visuales, objetos e instalaciones interactivas.';
-    const url = new URL(slug === 'info' ? 'info/' : p ? `trabajos/${p.slug}/` : './', base);
+    const url = new URL(['info', 'contacto'].includes(slug) ? `${slug}/` : p ? `trabajos/${p.slug}/` : './', base);
     document.querySelector('meta[name="description"]').content = descripcion;
     document.querySelector('meta[property="og:title"]').content = document.title;
     document.querySelector('meta[property="og:description"]').content = descripcion;
@@ -152,7 +164,8 @@ function navegar() {
     scrollTo({ top: posiciones.get(slug) || 0, left: 0, behavior: 'instant' });
     observarRevelado(app);
     limpiarVista = iniciarEfectosVista(app, CONFIG.efectos);
-  }, CONFIG.efectos.transiciones);
+  }, !primeraVista && CONFIG.efectos.transiciones);
+  primeraVista = false;
 }
 
 // El visor conserva el foco y permite recorrer las fotos con botones y teclado.
@@ -195,6 +208,7 @@ async function iniciar() {
     if (!respuesta.ok) throw new Error('No se pudieron cargar los proyectos');
     proyectos = await respuesta.json();
   } catch {
+    document.documentElement.classList.remove('cargando');
     app.innerHTML = '<p class="error">No pudimos cargar los trabajos. <a href="./">Volvé a intentar</a> o escribime a juanmaferra2000@gmail.com.</p>';
     return;
   }

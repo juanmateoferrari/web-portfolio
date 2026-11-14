@@ -146,3 +146,8 @@ img, video { display: block; width: 100%; }
 .visor-contador { display: block; text-align: center; font-size: .85rem; }
 button:focus-visible, [data-zoom]:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
 .texto:empty, .listas:empty { display: none; }
+
+.contacto { min-height: 70vh; }
+.contacto-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: clamp(1.5rem, 4vw, 2.5rem); }
+.contacto-links a { text-decoration: underline; text-underline-offset: .3em; text-decoration-color: var(--acento); }
+.contacto-links a:hover { color: var(--acento); }

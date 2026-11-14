@@ -85,10 +85,10 @@ function galeriaVisible(raiz) {
 }
 
 function portadas(raiz) {
-  if (!matchMedia('(hover: hover) and (pointer: fine)').matches || navigator.connection?.saveData) return () => {};
+  if (navigator.connection?.saveData) return () => {};
   const controller = new AbortController();
   const opciones = { signal: controller.signal };
-  const tactil = matchMedia('(hover: none)').matches;
+  const tactil = !matchMedia('(hover: hover) and (pointer: fine)').matches;
   const videos = [...raiz.querySelectorAll('.preview-video')];
   const visibles = new Set();
   let cerrado = false;

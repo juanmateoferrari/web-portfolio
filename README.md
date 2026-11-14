@@ -48,14 +48,14 @@ Las portadas se recortan en proporción 4:3: conviene dejar el motivo principal 
 
 ## Efectos opcionales
 En `js/config.js`, dentro de `efectos`, cambiá `true` por `false` y recargá para desactivar cada efecto:
-- `portadasVideo`: la portada reproduce `previews/portada.mp4` dentro del proyecto, si existe; si falta, conserva la imagen. Se activa al pasar el mouse o enfocar con el teclado. En celular las portadas permanecen estáticas y no descargan previews. Sin video compatible se mantiene la foto.
+- `portadasVideo`: la portada reproduce `previews/portada.mp4` dentro del proyecto, si existe; si falta, conserva la imagen. Se activa al pasar el mouse o enfocar con el teclado. En celular se reproduce una portada a la vez cuando al menos el 60 % está visible; las demás se pausan. Con ahorro de datos no se descargan previews. Sin video compatible se mantiene la foto.
 - `transiciones`: la portada se amplía al abrir el proyecto y se reduce al volver. Si el navegador no permite esa transición, se usa una entrada suave.
 - `trama`: puntos interactivos detrás de tu nombre, sin animación continua en reposo.
 
 Los tres respetan la preferencia de movimiento reducido del dispositivo. Los previews se pausan al salir de pantalla, cambiar de sección u ocultar la pestaña. Si la reproducción automática está bloqueada, se conserva la imagen de portada.
 
 ## Publicar
-Los cinco loops pesados de Superlocal y Silvia Ana usan una calidad intermedia: hasta 20 segundos, máximo de 1280 × 720, 30 fps, H.264 CRF 23 y sin audio. Se generaron desde los originales anteriores al recorte, no recomprimiendo la versión liviana. Las versiones anteriores de 540p están respaldadas en `../backups/videos-intermedio-*/version-liviana/`. Las capturas PNG de Superlocal se convirtieron a JPEG. Los originales de esta revisión están en `../backups/revision-*`, fuera del sitio.
+Los cinco loops pesados de Superlocal y Silvia Ana usan una calidad intermedia: 30 segundos, máximo de 1280 × 720, 30 fps, H.264 CRF 23 y sin audio. Se generaron desde los originales anteriores al recorte, no recomprimiendo la versión liviana. Las versiones completas previas al corte de 30 segundos están en `../backups/videos-30s-20261114/`. Las versiones recortadas a 20 segundos están en `../backups/videos-completos-20261114/`. Las versiones anteriores de 540p están respaldadas en `../backups/videos-intermedio-*/version-liviana/`. Las capturas PNG de Superlocal se convirtieron a JPEG. Los originales de esta revisión están en `../backups/revision-*`, fuera del sitio.
 Los clips `proyectos/<nombre>/previews/portada.mp4` son versiones de seis segundos para el inicio; no aparecen duplicados en las galerías.
 Los bucles de las galerías se cargan al entrar en pantalla y se pausan al salir o al ocultar la pestaña. Con movimiento reducido se ofrecen controles manuales.
 
@@ -78,3 +78,5 @@ El orden es una selección editorial definida por `orden` en cada `info.json`, n
 Las fotos tienen un texto alternativo de respaldo por proyecto y número de registro. Para describir una foto específicamente, agregá un objeto `alt` en `info.json`, con el nombre del archivo como clave y la descripción como valor.
 
 El enlace de Instagram conserva la URL HTTPS del perfil. En iPhone, `js/contact.js` intenta abrir `instagram://user?username=…` al tocarlo; si la página sigue visible después de 1,8 segundos, abre la web como respaldo. Al pasar a la app se cancela ese respaldo. En computadora se abre la web normalmente. iOS puede pedir confirmación o bloquear la apertura según el navegador; requiere comprobarse en un iPhone real.
+
+El botón Contacto abre `/contacto/`, con los enlaces de `CONFIG.contacto`. La carga inicial oculta el contenido alternativo hasta que la vista está lista, sin animar esa primera sustitución.

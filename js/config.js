@@ -27,7 +27,7 @@ export const CONFIG = {
     creativa: 'Lado creativo',
   },
   efectos: {                        // true / false para activar o apagar
-    portadasVideo: true, // preview dedicada al pasar el mouse; sin autoplay en celular
+    portadasVideo: true, // preview dedicada al pasar el mouse; autoplay en celular al entrar en pantalla
     transiciones: true, // ampliación de portada al entrar y volver de un proyecto
     trama: false,        // puntos que responden al cursor detrás del nombre
     luz: true,        // foco de luz que sigue al mouse

@@ -12,6 +12,7 @@ module.exports = function generarPaginas(proyectos) {
     body: `<article class="proyecto"><a href="./">Volver a los trabajos</a><h1>${esc(p.titulo)}</h1><p>${esc(p.corto)}</p><p>${esc(p.anio)}${p.equipo ? ' / ' + esc(p.equipo) : ''}</p>${p.media.filter(m => m.tipo === 'imagen').map((m,i) => `<img src="${esc(m.src)}" alt="${esc(m.alt || `${p.titulo}, registro ${i+1}`)}" loading="lazy">`).join('')}${p.largo.map(t => `<p>${esc(t)}</p>`).join('')}</article>`,
   }));
   pages.push({route:'info/', title:'Sobre mí | Juan Mateo Ferrari', description:'Escenografía, luz e instalaciones interactivas. Ingeniero en Sistemas de Comunicación, Udelar.',image:'img/f4bc4094-4b11-41da-bad0-e0839c3f8106.JPG',body:'<article class="proyecto"><h1>Juan Mateo Ferrari</h1><p>Ingeniero en Sistemas de Comunicación, Udelar. Escenografía, luz e instalaciones interactivas.</p><a href="./">Ver trabajos</a></article>'});
+  pages.push({route:'contacto/', title:'Contacto | Juan Mateo Ferrari', description:'Contact? a Juan Mateo Ferrari por mail o Instagram.', body:'<article class="proyecto contacto"><a class="volver" href="./">Volver a los trabajos</a><h1>Contacto</h1><div class="contacto-links"><a href="mailto:juanmaferra2000@gmail.com">Mail</a><a href="https://www.instagram.com/juan.mateo.ferrari/">Instagram</a></div></article>'});
   for (const p of pages) {
     const url = new URL(p.route, origin + '/').href;
     const image = new URL(p.route === 'trabajos/mapping-dinamico/' ? 'img/social/mapping-dinamico.jpg' : p.image || 'proyectos/chiara/portada.jpg', origin + '/').href;
