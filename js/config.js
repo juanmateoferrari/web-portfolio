@@ -3,7 +3,7 @@
 // ============================================================
 export const CONFIG = {
   nombre: 'Juan Mateo Ferrari',
-  bio: 'Me interesa conectar lo físico y lo digital. Combino trabajo manual, electrónica y programación para crear con luz, imagen y sonido.',
+  bio: 'Soy Ingeniero en Sistemas de Comunicación recibido en la Universidad de la República. Me interesa aplicar mis conocumientos técnicos para conectar lo físico y lo digital. Combino trabajo manual, electrónica y programación para crear con luz, imagen y sonido.',
   sobreMi: {                       // presentación de la sección Sobre mí
     foto: 'img/f4bc4094-4b11-41da-bad0-e0839c3f8106.JPG',
     intro: 'Trabajo con la luz, la imagen y los materiales para crear escenografías, objetos e instalaciones interactivas.',
