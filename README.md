@@ -21,7 +21,7 @@ y abrí la dirección que te muestre.
 
 ## Agregar un proyecto
 1. Creá proyectos/<nombre-sin-espacios>/
-2. Poné adentro (todo opcional): info.json, corto.txt, largo.txt, ingenieril.txt, creativa.txt
+2. Poné adentro (todo opcional): info.json, corto.txt, largo.txt
 3. Poné fotos, gifs y videos en la carpeta (o en una subcarpeta media/)
 4. node scripts/scan.js  (en Netlify es automático)
 
@@ -74,7 +74,7 @@ Comprimí las fotos (ancho máx. ~2000 px) antes de subirlas.
 
 El dominio usado por el generador es `https://juan-mateo-ferrari.vercel.app`; se puede cambiar con `SITE_URL`. Si cambiás el dominio, actualizá también los metadatos de la portada en `index.html`.
 
-El orden es una selección editorial definida por `orden` en cada `info.json`, no una cronología. Se mantuvo la selección existente. Los créditos usan nombres sin el prefijo “con”. Las secciones técnicas y creativas solo se muestran donde hay texto disponible: no se inventan roles ni contenido.
+El orden es una selección editorial definida por `orden` en cada `info.json`, no una cronología. Se mantuvo la selección existente. Los créditos usan nombres sin el prefijo “con”.
 
 Las fotos tienen un texto alternativo de respaldo por proyecto y número de registro. Para describir una foto específicamente, agregá un objeto `alt` en `info.json`, con el nombre del archivo como clave y la descripción como valor.
 

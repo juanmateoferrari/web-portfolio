@@ -3,7 +3,7 @@
 // ============================================================
 export const CONFIG = {
   nombre: 'Juan Mateo Ferrari',
-  bio: 'Soy Ingeniero en Sistemas de Comunicación recibido en la Universidad de la República. Me interesa aplicar mis conocumientos técnicos para conectar lo físico y lo digital. Combino trabajo manual, electrónica y programación para crear con luz, imagen y sonido.',
+  bio: 'Soy Ingeniero en Sistemas de Comunicación recibido en la Universidad de la República. Me interesa aplicar mis conocimientos técnicos para conectar lo físico y lo digital. Combino trabajo manual, electrónica y programación para crear con luz, imagen y sonido.',
   sobreMi: {                       // presentación de la sección Sobre mí
     foto: 'img/f4bc4094-4b11-41da-bad0-e0839c3f8106.JPG',
     intro: 'Trabajo con la luz, la imagen y los materiales para crear escenografías, objetos e instalaciones interactivas.',
@@ -56,10 +56,6 @@ export const CONFIG = {
     { texto: 'Mail', url: 'mailto:juanmaferra2000@gmail.com' },
     { texto: 'Instagram', url: 'https://www.instagram.com/juan.mateo.ferrari/' },
   ],
-  etiquetas: {                      // títulos de las dos listas de cada proyecto
-    ingenieril: 'Lado ingenieril',
-    creativa: 'Lado creativo',
-  },
   efectos: {                        // true / false para activar o apagar
     portadasVideo: true, // preview dedicada al pasar el mouse; autoplay en celular al entrar en pantalla
     transiciones: true, // ampliación de portada al entrar y volver de un proyecto

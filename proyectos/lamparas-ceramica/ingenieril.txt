@@ -1,4 +1,0 @@
-Diseño y armado del circuito eléctrico
-Integración de iluminación LED
-Regulación del color de la luz mediante potenciómetros
-Planificación del recorrido del cableado dentro de la pieza

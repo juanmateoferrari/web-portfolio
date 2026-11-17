@@ -13,8 +13,6 @@
     "embeds": [],
     "corto": "Diseño y construcción de la escenografía y la iluminación para el concierto de Chiara Scanzerra en Magnolio Sala, realizado en equipo en julio de 2025. El proyecto combinó lo manual, lo electrónico y lo digital, desde la construcción de las estructuras hasta la programación de los efectos de más de 1000 luces LED.",
     "largo": [],
-    "ingenieril": [],
-    "creativa": [],
     "portada": "proyectos/chiara/portada.jpg",
     "preview": "proyectos/chiara/previews/portada.mp4",
     "previewMobile": "proyectos/chiara/previews/portada-mobile.mp4",
@@ -92,18 +90,6 @@
       "El proceso comienza con el diseño del cuerpo de la lámpara en cerámica, planificando desde el inicio por dónde va a recorrer el cableado, de modo que la parte técnica quede integrada a la forma de la pieza y no agregada a posteriori. Una vez modelada, la pieza se hornea y se eligen los esmaltes y óxidos que definen su terminación final.",
       "A continuación se realiza todo el cableado y se define el color de la luz que va a emitir cada lámpara. Mediante uno o más potenciómetros, el color se vuelve regulable, permitiendo ajustar la atmósfera que genera la pieza según el momento o el espacio en el que se encuentre.",
       "Las luces se orientan hacia el interior de la pieza, de modo que la luz no se recibe de forma directa, sino reflejada y difusa a través de la cerámica. Así, la luz se percibe de forma suave y envolvente, generando un ambiente íntimo en el espacio donde se encuentra la lámpara."
-    ],
-    "ingenieril": [
-      "Diseño y armado del circuito eléctrico",
-      "Integración de iluminación LED",
-      "Regulación del color de la luz mediante potenciómetros",
-      "Planificación del recorrido del cableado dentro de la pieza"
-    ],
-    "creativa": [
-      "Diseño y modelado en cerámica técnica: placas",
-      "Horneado y selección de esmaltes y óxidos",
-      "Diseño de objeto: integración de forma y función",
-      "Diseño de la atmósfera lumínica de cada pieza"
     ],
     "portada": "proyectos/lamparas-ceramica/portada.jpg",
     "preview": "proyectos/lamparas-ceramica/previews/portada.mp4",
@@ -217,8 +203,6 @@
     "embeds": [],
     "corto": "Proyecto final de carrera desarrollado junto a Franco Berrutti y Silvina Datz en el Instituto de Ingeniería Eléctrica (Udelar), situado en la intersección entre la ingeniería y la creación artística. Diseñamos un sistema de mapping dinámico capaz de lograr que la imagen proyectada siga en tiempo real a un objeto en movimiento, pensado como herramienta para las artes escénicas.",
     "largo": [],
-    "ingenieril": [],
-    "creativa": [],
     "portada": "proyectos/mapping-dinamico/portada.webp",
     "preview": "proyectos/mapping-dinamico/previews/portada.mp4",
     "previewMobile": "proyectos/mapping-dinamico/previews/portada-mobile.mp4",
@@ -247,16 +231,6 @@
       "El lugar no tenía pantallas ni superficies lisas para proyectar. La solución fue construir una estructura con varias capas de tela traslúcida, colgar un proyector y ajustar el mapping para que la imagen coincidiera con la superficie elegida.",
       "Junto a Isa Epstein escuchamos las canciones y exploramos qué transmitía cada una y qué estética podía acompañarlas. A partir de dibujos con acrílico y de las texturas que aparecían al aplastarlo, creamos pequeñas animaciones.",
       "En TouchDesigner combiné ese material con videos de fondo y generé clips para cada tema, explorando el color y los modos de mezcla. Después uní y edité esos fragmentos en videos de entre 60 y 70 segundos por canción. Además de la escenografía y las visuales, operé las luces durante el concierto."
-    ],
-    "ingenieril": [
-      "Montaje del proyector y ajuste del mapping sobre las capas de tela.",
-      "Composición y procesamiento de las imágenes en TouchDesigner.",
-      "Operación de luces durante el concierto."
-    ],
-    "creativa": [
-      "Diseño y construcción de la escenografía con telas traslúcidas.",
-      "Exploración de la estética de cada canción junto a Isa Epstein.",
-      "Creación y edición de visuales a partir de dibujos con acrílico y videos."
     ],
     "portada": "proyectos/visuales-silvia-ana/portada.JPG",
     "preview": "proyectos/visuales-silvia-ana/previews/portada.mp4",
@@ -339,8 +313,6 @@
     "embeds": [],
     "corto": "Visuales y mapping realizados para el brindis de apertura de Superlocal, festival internacional de diseño, a partir de la identidad gráfica creada por el estudio Atolón de Mororoa.",
     "largo": [],
-    "ingenieril": [],
-    "creativa": [],
     "portada": "proyectos/visuales-sprlcl/portada.jpg",
     "preview": "proyectos/visuales-sprlcl/previews/portada.mp4",
     "previewMobile": "proyectos/visuales-sprlcl/previews/portada-mobile.mp4",
@@ -424,8 +396,6 @@
     "embeds": [],
     "corto": "Instalación interactiva presentada en Ingeniería deMuestra (octubre de 2025) junto a Franco Berrutti y Silvina Datz. Frente a una estructura con siete tiras de luces LED, el público mueve la luz con sus manos y transforma en tiempo real tanto las luces como la música que suena en el espacio.",
     "largo": [],
-    "ingenieril": [],
-    "creativa": [],
     "portada": "proyectos/idm/portada.jpg",
     "preview": "",
     "previewMobile": "",

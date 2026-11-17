@@ -6,8 +6,6 @@
 //   info.json       titulo, anio, orden, equipo, tags[], columnas, embeds[], oculto
 //   corto.txt       texto corto (portada y encabezado)
 //   largo.txt       texto largo; un párrafo = bloques separados por línea vacía
-//   ingenieril.txt  lista, un ítem por línea
-//   creativa.txt    lista, un ítem por línea
 //   fotos, gifs y videos: sueltos en la carpeta o dentro de media/
 //     - se ordenan por nombre (01-..., 02-...)
 //     - "portada.*"  = imagen de portada (no aparece en la galería)
@@ -27,7 +25,6 @@ const leer = (d, f) => {
   return fs.existsSync(p) ? fs.readFileSync(p, 'utf8').trim() : '';
 };
 const parrafos = t => t.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean);
-const lineas = t => t.split('\n').map(s => s.trim()).filter(Boolean);
 
 // Devuelve los archivos multimedia de la carpeta (y de media/), ordenados.
 function medios(d) {
@@ -72,8 +69,6 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
       embeds: info.embeds || [],
       corto: leer(d, 'corto.txt'),
       largo: parrafos(leer(d, 'largo.txt')),
-      ingenieril: lineas(leer(d, 'ingenieril.txt')),
-      creativa: lineas(leer(d, 'creativa.txt')),
       portada: portada ? portada.src : '',
       preview: fs.existsSync(preview) ? path.relative(RAIZ, preview).split(path.sep).map(encodeURIComponent).join('/') : '',
       previewMobile: fs.existsSync(previewMobile) ? path.relative(RAIZ, previewMobile).split(path.sep).map(encodeURIComponent).join('/') : '',

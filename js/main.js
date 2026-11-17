@@ -38,9 +38,6 @@ const embed = e => {
   return `<div class="embed"><iframe src="${url}" loading="lazy" allowfullscreen title="Video"></iframe></div>`;
 };
 
-const lista = (titulo, items) => items.length
-  ? `<div><h3>${esc(titulo)}</h3><ul>${items.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>` : '';
-
 const enlacesContacto = () => CONFIG.contacto
   .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('');
 
@@ -125,7 +122,7 @@ function vistaInfo() {
 }
 
 // Proyecto: encabezado, galería (columnas configurables), texto largo,
-// las dos listas, videos incrustados y link al siguiente.
+// videos incrustados y link al siguiente.
 function vistaProyecto(slug) {
   const i = proyectos.findIndex(p => p.slug === slug);
   if (i < 0) return vistaInicio();
@@ -145,7 +142,6 @@ function vistaProyecto(slug) {
       <div class="galeria" style="--cols:${Math.min(p.columnas, Math.max(1, p.media.length))}">${p.media.map((m, i) => medio(m, i, p)).join('')}</div>
       ${p.embeds.map(embed).join('')}
       <div class="texto">${p.largo.map(t => `<p>${esc(t)}</p>`).join('')}</div>
-      <div class="listas">${lista(CONFIG.etiquetas.ingenieril, p.ingenieril)}${lista(CONFIG.etiquetas.creativa, p.creativa)}</div>
       <a class="siguiente" href="trabajos/${esc(sig.slug)}/">Siguiente: ${esc(sig.titulo)}</a>
     </article>${pie()}`;
 }
