@@ -17,6 +17,7 @@
     "creativa": [],
     "portada": "proyectos/chiara/portada.jpg",
     "preview": "proyectos/chiara/previews/portada.mp4",
+    "previewMobile": "proyectos/chiara/previews/portada-mobile.mp4",
     "media": [
       {
         "src": "proyectos/chiara/93c996cb-9288-4a42-95a6-56a28c6af9eb_rw_1920.jpg",
@@ -106,6 +107,7 @@
     ],
     "portada": "proyectos/lamparas-ceramica/portada.jpg",
     "preview": "proyectos/lamparas-ceramica/previews/portada.mp4",
+    "previewMobile": "proyectos/lamparas-ceramica/previews/portada-mobile.mp4",
     "media": [
       {
         "src": "proyectos/lamparas-ceramica/aa.jpg",
@@ -219,6 +221,7 @@
     "creativa": [],
     "portada": "proyectos/mapping-dinamico/portada.webp",
     "preview": "proyectos/mapping-dinamico/previews/portada.mp4",
+    "previewMobile": "proyectos/mapping-dinamico/previews/portada-mobile.mp4",
     "media": [
       {
         "src": "proyectos/mapping-dinamico/loop-emad.mp4",
@@ -257,6 +260,7 @@
     ],
     "portada": "proyectos/visuales-silvia-ana/portada.JPG",
     "preview": "proyectos/visuales-silvia-ana/previews/portada.mp4",
+    "previewMobile": "proyectos/visuales-silvia-ana/previews/portada-mobile.mp4",
     "media": [
       {
         "src": "proyectos/visuales-silvia-ana/DSC02584.JPG",
@@ -339,6 +343,7 @@
     "creativa": [],
     "portada": "proyectos/visuales-sprlcl/portada.jpg",
     "preview": "proyectos/visuales-sprlcl/previews/portada.mp4",
+    "previewMobile": "proyectos/visuales-sprlcl/previews/portada-mobile.mp4",
     "media": [
       {
         "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.jpg",
@@ -423,6 +428,7 @@
     "creativa": [],
     "portada": "proyectos/idm/portada.jpg",
     "preview": "",
+    "previewMobile": "",
     "media": [
       {
         "src": "proyectos/idm/IMG_0758.JPG",

@@ -45,14 +45,19 @@ const enlacesContacto = () => CONFIG.contacto
   .map(c => `<a href="${esc(c.url)}">${esc(c.texto)}</a>`).join('');
 
 const navegacion = etiqueta => `<nav class="navegacion" aria-label="${etiqueta}">
-  <a href="info/">Sobre mí</a><a href="contacto/">Contacto</a>
+  ${ruta() ? '<a href="./">Home</a>' : ''}
+  ${['info', 'contacto'].includes(ruta()) ? `<div class="enlaces-contacto">${enlacesContacto()}</div>` : '<a href="info/">Info</a>'}
 </nav>`;
 
 const pie = () => `<footer class="pie" id="contacto">${navegacion('Navegación del pie')}</footer>`;
 
 // Solo los loop-* MP4/WebM se usan como previews; nunca cargan hasta reproducirse.
-const preview = p => CONFIG.efectos.portadasVideo && !matchMedia('(prefers-reduced-motion: reduce)').matches
-  ? (p.preview ? { src: p.preview } : null) : null;
+const preview = p => {
+  if (!CONFIG.efectos.portadasVideo || matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return null;
+  const mobile = matchMedia('(max-width: 760px), (hover: none) and (pointer: coarse)').matches;
+  const src = mobile ? p.previewMobile || p.preview : p.preview;
+  return src ? { src } : null;
+};
 const nombreTransicion = p => CONFIG.efectos.transiciones
   ? `style="view-transition-name: obra-${proyectos.indexOf(p)}"` : '';
 const videoPortada = p => {
@@ -69,7 +74,7 @@ function vistaInicio() {
     <header class="cabecera">
       ${navegacion('Navegación principal')}</header>
     <section class="hero"><h1>${esc(CONFIG.nombre)}</h1><p>${esc(CONFIG.bio)}</p></section>
-    <section class="trabajos" aria-labelledby="titulo-trabajos"><div class="seccion-titulo"><h2 id="titulo-trabajos">Trabajos seleccionados</h2></div>
+    <section class="trabajos" aria-label="Trabajos">
     <div class="filas">${proyectos.map((p, i) => `
       <a class="fila" href="trabajos/${esc(p.slug)}/">
         <div class="fila-img" ${nombreTransicion(p)}>${p.portada ? `<img src="${esc(p.portada)}" alt="${esc(p.titulo)}" ${i < 2 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : `<div class="sin-portada"><span>${esc(p.titulo)}</span></div>`}${videoPortada(p)}</div>
@@ -82,34 +87,40 @@ function vistaInicio() {
 }
 
 function vistaInfo() {
-  document.title = `Sobre mí | ${CONFIG.nombre}`;
-  app.innerHTML = `<article class="proyecto info">
-    <a class="volver" href="./">← Volver a los trabajos</a>
-    <h1>Sobre mí</h1>
-    <figure class="info-retrato" tabindex="0" aria-label="Retrato y presentación de ${esc(CONFIG.nombre)}">
-      <img src="${esc(CONFIG.sobreMi.foto)}" alt="Retrato de ${esc(CONFIG.nombre)}" decoding="async">
-      <figcaption><p>${esc(CONFIG.sobreMi.intro)}</p></figcaption>
-    </figure>
-    <div class="info-texto">${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
-    <section class="info-areas" aria-labelledby="titulo-areas">
-      <div class="areas-cabecera"><h2 id="titulo-areas">Áreas de trabajo</h2></div>
-      <div class="areas-carrusel" id="areas-carrusel" role="region" aria-labelledby="titulo-areas" tabindex="0">${CONFIG.sobreMi.areas.map(a => {
-        const p = proyectos.find(p => p.slug === a.proyecto);
-        const etiqueta = p ? 'a' : 'article';
-        const destino = p ? ` href="trabajos/${esc(p.slug)}/" aria-label="${esc(a.titulo)}: ${esc(p.titulo)}"` : '';
-        return `<${etiqueta} class="area-card"${destino}>${p?.portada ? `<img src="${esc(p.portada)}" alt="${esc(p.titulo)}" loading="lazy" decoding="async">` : ''}<div class="area-card-texto"><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p></div></${etiqueta}>`;
-      }).join('')}</div>
-    </section>
-  </article>${pie()}`;
-}
+  document.title = `Info | ${CONFIG.nombre}`;
+  app.innerHTML = `<header class="cabecera">${navegacion('Navegación principal')}</header>
+  <article class="info">
+    <div class="info-grilla">
+      <div class="info-detalle">
+        <div class="info-texto"><p>${esc(CONFIG.sobreMi.intro)}</p>${CONFIG.sobreMi.parrafos.map(p => `<p>${esc(p)}</p>`).join('')}</div>
 
-function vistaContacto() {
-  document.title = `Contacto | ${CONFIG.nombre}`;
-  app.innerHTML = `<article class="proyecto contacto">
-    <a class="volver" href="./">Volver a los trabajos</a>
-    <h1>Contacto</h1>
-    <p class="lead">Podés escribirme por mail o instagram :)</p>
-    <div class="contacto-links">${enlacesContacto()}</div>
+        <details class="info-experiencia info-contacto-desplegable">
+          <summary>Contactame</summary>
+          <div class="experiencia-contenido">
+            <p>Conversemos para trabajar juntos, podés hablarme por Mail o Instagram.</p>
+            <div class="info-contacto-enlaces">${CONFIG.contacto.map(c => {
+              const etiqueta = c.url.startsWith('mailto:') ? c.url.slice(7) : `@${new URL(c.url).pathname.split('/').filter(Boolean).pop()}`;
+              return `<a href="${esc(c.url)}">${esc(etiqueta)}</a>`;
+            }).join('')}</div>
+          </div>
+        </details>
+        <details class="info-experiencia">
+          <summary>Ver experiencia</summary>
+          <div class="experiencia-contenido">
+            ${CONFIG.sobreMi.experiencia.map(e => `<article class="experiencia-puesto">
+              <h3>${esc(e.periodo)} // ${esc(e.cargo)}${e.organizacion ? ` en ${esc(e.organizacion)}` : ''}</h3>
+              <p>${esc(e.descripcion)}</p>
+            </article>`).join('')}
+            <h2>Habilidades técnicas</h2>
+            <ul>${CONFIG.sobreMi.habilidades.map(h => `<li>${esc(h)}</li>`).join('')}</ul>
+          </div>
+        </details>
+      </div>
+      <figure class="info-retrato">
+        <img src="${esc(CONFIG.sobreMi.foto)}" alt="Retrato de ${esc(CONFIG.nombre)}" decoding="async">
+      </figure>
+    </div>
+
   </article>${pie()}`;
 }
 
@@ -122,11 +133,15 @@ function vistaProyecto(slug) {
   const meta = [p.anio, p.equipo, ...p.tags].filter(Boolean).map(esc).join(' / ');
   document.title = `${p.titulo} | ${CONFIG.nombre}`;
   app.innerHTML = `
+    <header class="cabecera">${navegacion('Navegación principal')}</header>
     <article class="proyecto">
-      <a class="volver" href="./">Volver</a>
-      <h1>${esc(p.titulo)}</h1>
-      ${meta ? `<p class="meta">${meta}</p>` : ''}
-      ${p.corto ? `<p class="lead">${esc(p.corto)}</p>` : ''}
+      <header class="hero proyecto-cabecera">
+        <div>
+          <h1>${esc(p.titulo)}</h1>
+          ${meta ? `<p class="meta">${meta}</p>` : ''}
+        </div>
+        ${p.corto ? `<p>${esc(p.corto)}</p>` : ''}
+      </header>
       <div class="galeria" style="--cols:${Math.min(p.columnas, Math.max(1, p.media.length))}">${p.media.map((m, i) => medio(m, i, p)).join('')}</div>
       ${p.embeds.map(embed).join('')}
       <div class="texto">${p.largo.map(t => `<p>${esc(t)}</p>`).join('')}</div>
@@ -138,6 +153,7 @@ function vistaProyecto(slug) {
 // ---------- Navegación y arranque ----------
 
 function navegar() {
+  if (ruta() === 'contacto') history.replaceState(null, '', new URL('info/', base));
   // El contacto es un ancla dentro de la vista actual, no un proyecto.
   if (location.hash === '#contacto') {
     document.getElementById('contacto')?.scrollIntoView();
@@ -149,7 +165,7 @@ function navegar() {
   if (visor.open) visor.close();
   cambiarVista(() => {
     limpiarVista();
-    slug === 'contacto' ? vistaContacto() : slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
+    slug === 'info' ? vistaInfo() : slug ? vistaProyecto(slug) : vistaInicio();
     document.documentElement.classList.remove('cargando');
     const p = proyectos.find(p => p.slug === slug);
     const descripcion = p?.corto || 'Escenografía, luz, visuales, objetos e instalaciones interactivas.';

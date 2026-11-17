@@ -59,6 +59,7 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
     const m = medios(d);
     const portada = m.find(x => x.portada) || m.find(x => x.tipo === 'imagen');
     const preview = path.join(d, 'previews', 'portada.mp4');
+    const previewMobile = path.join(d, 'previews', 'portada-mobile.mp4');
     return {
       slug: e.name,
       titulo: info.titulo || e.name,
@@ -75,6 +76,7 @@ const proyectos = fs.readdirSync(DIR, { withFileTypes: true })
       creativa: lineas(leer(d, 'creativa.txt')),
       portada: portada ? portada.src : '',
       preview: fs.existsSync(preview) ? path.relative(RAIZ, preview).split(path.sep).map(encodeURIComponent).join('/') : '',
+      previewMobile: fs.existsSync(previewMobile) ? path.relative(RAIZ, previewMobile).split(path.sep).map(encodeURIComponent).join('/') : '',
       media: m.filter(x => !x.portada).map(x => ({ ...x, alt: info.alt?.[decodeURIComponent(x.src.split('/').pop())] || '' })),
     };
   })

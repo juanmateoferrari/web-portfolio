@@ -57,6 +57,7 @@ Los tres respetan la preferencia de movimiento reducido del dispositivo. Los pre
 ## Publicar
 Los cinco loops pesados de Superlocal y Silvia Ana usan una calidad intermedia: 30 segundos, máximo de 1280 × 720, 30 fps, H.264 CRF 23 y sin audio. Se generaron desde los originales anteriores al recorte, no recomprimiendo la versión liviana. Las versiones completas previas al corte de 30 segundos están en `../backups/videos-30s-20261114/`. Las versiones recortadas a 20 segundos están en `../backups/videos-completos-20261114/`. Las versiones anteriores de 540p están respaldadas en `../backups/videos-intermedio-*/version-liviana/`. Las capturas PNG de Superlocal se convirtieron a JPEG. Los originales de esta revisión están en `../backups/revision-*`, fuera del sitio.
 Los clips `proyectos/<nombre>/previews/portada.mp4` son versiones de seis segundos para el inicio; no aparecen duplicados en las galerías.
+En pantallas de hasta 760 px o dispositivos táctiles sin hover se usa `previews/portada-mobile.mp4`, hasta 854 × 480 y 24 fps. En escritorio se mantiene la versión de hasta 720p. Solo se descarga la variante elegida cuando se reproduce; si falta la variante móvil se usa la de escritorio.
 Los bucles de las galerías se cargan al entrar en pantalla y se pausan al salir o al ocultar la pestaña. Con movimiento reducido se ofrecen controles manuales.
 
 El respaldo previo a esta optimización está fuera del sitio, en `../backups/portfolio-20261112-143219/sitio-original.zip`.
