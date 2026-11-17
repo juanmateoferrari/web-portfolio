@@ -52,7 +52,7 @@ img, video { display: block; width: 100%; }
 .hero { position: relative; isolation: isolate; }
 .trama { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 .hero h1 { font-size: clamp(1.8rem, 4.1vw, 8rem); font-weight: 400; }
-.hero > p:last-child { max-width: 43ch; justify-self: start; margin-top: .25rem; color: var(--texto); font-size: clamp(1rem, .7rem + .5vw, 1.75rem); line-height: 1.5; text-wrap: pretty; }
+.hero > p:last-child { max-width: 70ch; justify-self: start; margin-top: .25rem; color: var(--texto); font-size: clamp(1rem, .7rem + .5vw, 1.75rem); line-height: 1.5; text-wrap: pretty; }
 .filas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 1.5rem; padding-bottom: 4rem; }
 .fila { min-width: 0; -webkit-tap-highlight-color: transparent; }
 .fila-texto { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-top: .9rem; }
@@ -139,7 +139,7 @@ img, video { display: block; width: 100%; }
 @media (max-width: 760px) {
   .hero { grid-template-columns: minmax(0, 1fr); padding: 1.5rem 0 2.5rem; }
   .hero h1 { justify-self: start; }
-  .hero > p:last-child { max-width: 43ch; margin-top: 1.25rem; font-size: var(--texto-base); }
+  .hero > p:last-child { max-width: 70ch; margin-top: 1.25rem; font-size: var(--texto-base); }
   .filas, .listas { grid-template-columns: 1fr; gap: 1.5rem; }
   .info-grilla { grid-template-columns: minmax(0, 1fr); }
   .info-texto, .info-contacto-desplegable .experiencia-contenido { font-size: clamp(1.15rem, 1rem + .5vw, 1.3rem); }
