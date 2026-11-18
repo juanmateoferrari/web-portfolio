@@ -1,5 +1,5 @@
-El lugar no tenía pantallas ni superficies lisas para proyectar. La solución fue construir una estructura con varias capas de tela traslúcida, colgar un proyector y ajustar el mapping para que la imagen coincidiera con la superficie elegida.
+Como en Inmigrantes no había pantallas ni superficies lisas para proyectar, se armó una estructura con varias capas de tela traslúcida. Se colgó un proyector y se ajustó el mapping para que la imagen coincidiera con la superficie elegida.
 
-Junto a Isa Epstein escuchamos las canciones y exploramos qué transmitía cada una y qué estética podía acompañarlas. A partir de dibujos con acrílico y de las texturas que aparecían al aplastarlo, creamos pequeñas animaciones.
+El trabajo con Isabella Epstein empezó por escuchar las canciones y buscar qué imágenes podían acompañar a cada una. Las pequeñas animaciones surgieron de los dibujos con acrílico y de las texturas que aparecían al aplastarlo.
 
-En TouchDesigner combiné ese material con videos de fondo y generé clips para cada tema, explorando el color y los modos de mezcla. Después uní y edité esos fragmentos en videos de entre 60 y 70 segundos por canción. Además de la escenografía y las visuales, operé las luces durante el concierto.
+En TouchDesigner se combinaron esas animaciones con videos de fondo y se probaron distintas formas de mezclar las imágenes y el color. Después, los fragmentos se editaron en piezas de entre 60 y 70 segundos para cada canción. El trabajo también incluyó la operación de luces durante el concierto.

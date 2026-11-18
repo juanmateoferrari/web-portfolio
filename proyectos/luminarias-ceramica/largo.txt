@@ -1,0 +1,3 @@
+El recorrido del cableado se define al diseñar el cuerpo de cada lámpara, para que quede integrado a la forma de la pieza. El cuerpo se arma a mano con placas de cerámica. Una vez modelado, se hornea y se eligen los esmaltes y óxidos que le dan su terminación.
+
+Después se arma el circuito y se colocan las luces LED orientadas hacia el interior. La luz rebota en la cerámica y sale suave y difusa. Cada lámpara tiene uno o más potenciómetros que permiten ajustar el color de la luz según el espacio o el momento.

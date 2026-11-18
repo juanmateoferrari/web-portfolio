@@ -1,6 +1,6 @@
 [
   {
-    "slug": "chiara",
+    "slug": "chiara-magnolio",
     "titulo": "Chiara - Magnolio Sala",
     "anio": "2025",
     "orden": 1,
@@ -11,63 +11,66 @@
     ],
     "columnas": 2,
     "embeds": [],
-    "corto": "Diseño y construcción de la escenografía y la iluminación para el concierto de Chiara Scanzerra en Magnolio Sala, realizado en equipo en julio de 2025. El proyecto combinó lo manual, lo electrónico y lo digital, desde la construcción de las estructuras hasta la programación de los efectos de más de 1000 luces LED.",
-    "largo": [],
-    "portada": "proyectos/chiara/portada.jpg",
-    "preview": "proyectos/chiara/previews/portada.mp4",
-    "previewMobile": "proyectos/chiara/previews/portada-mobile.mp4",
+    "corto": "Diseño y construcción de la escenografía y la iluminación para los dos conciertos de Chiara Scanzerra en Magnolio Sala, un trabajo realizado en equipo en julio de 2025. El proyecto combinó lo manual, lo electrónico y lo digital, desde la construcción de las estructuras hasta la programación de los efectos de más de 1000 luces LED.",
+    "largo": [
+      "El proceso comenzó con la construcción de pantallas a medida con MDF, madera y papel de calco. El papel difundía la luz de los LED y daba al escenario una iluminación más suave que la que se logra con pantallas LED convencionales. Las distintas profundidades e inclinaciones de las estructuras permitieron distribuir la luz de diferentes maneras y crear distintas atmósferas a lo largo de los conciertos.",
+      "Se cablearon más de 1000 luces LED y las pantallas se controlaron con un ESP32. Los efectos de cada canción se prepararon con WLED y TouchDesigner. Durante el montaje en Magnolio Sala se coordinó con el equipo técnico para que las luces de la sala acompañaran los efectos ya programados."
+    ],
+    "portada": "proyectos/chiara-magnolio/portada.jpg",
+    "preview": "proyectos/chiara-magnolio/previews/portada.mp4",
+    "previewMobile": "proyectos/chiara-magnolio/previews/portada-mobile.mp4",
     "media": [
       {
-        "src": "proyectos/chiara/93c996cb-9288-4a42-95a6-56a28c6af9eb_rw_1920.jpg",
+        "src": "proyectos/chiara-magnolio/93c996cb-9288-4a42-95a6-56a28c6af9eb_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/875ddf70-08c6-4624-b808-76dca64ccd43_rw_1920.jpg",
+        "src": "proyectos/chiara-magnolio/875ddf70-08c6-4624-b808-76dca64ccd43_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/aa.jpg",
+        "src": "proyectos/chiara-magnolio/aa.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/f0816081-5af7-4d3e-8f33-1a4af0752143_rw_1920.jpg",
+        "src": "proyectos/chiara-magnolio/f0816081-5af7-4d3e-8f33-1a4af0752143_rw_1920.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/loop-chiara1%20(1).mp4",
+        "src": "proyectos/chiara-magnolio/loop-chiara1%20(1).mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/loop-chiara1%20(3).mp4",
+        "src": "proyectos/chiara-magnolio/loop-chiara1%20(3).mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/loop-chiara1%20(4).mp4",
+        "src": "proyectos/chiara-magnolio/loop-chiara1%20(4).mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/chiara/loop-chiara2.mp4",
+        "src": "proyectos/chiara-magnolio/loop-chiara2.mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
@@ -76,7 +79,7 @@
     ]
   },
   {
-    "slug": "lamparas-ceramica",
+    "slug": "luminarias-ceramica",
     "titulo": "Luminarias en cerámica",
     "anio": "2024-2025",
     "orden": 2,
@@ -87,100 +90,99 @@
     "embeds": [],
     "corto": "Serie de lámparas que combinan cerámica e iluminación LED, surgidas de una búsqueda por integrar los procesos manuales de la cerámica con la ingeniería y los conocimientos técnicos. Cada pieza se diseña, modela y esmalta a mano, e incorpora un circuito que permite regular el color de la luz.",
     "largo": [
-      "El proceso comienza con el diseño del cuerpo de la lámpara en cerámica, planificando desde el inicio por dónde va a recorrer el cableado, de modo que la parte técnica quede integrada a la forma de la pieza y no agregada a posteriori. Una vez modelada, la pieza se hornea y se eligen los esmaltes y óxidos que definen su terminación final.",
-      "A continuación se realiza todo el cableado y se define el color de la luz que va a emitir cada lámpara. Mediante uno o más potenciómetros, el color se vuelve regulable, permitiendo ajustar la atmósfera que genera la pieza según el momento o el espacio en el que se encuentre.",
-      "Las luces se orientan hacia el interior de la pieza, de modo que la luz no se recibe de forma directa, sino reflejada y difusa a través de la cerámica. Así, la luz se percibe de forma suave y envolvente, generando un ambiente íntimo en el espacio donde se encuentra la lámpara."
+      "El recorrido del cableado se define al diseñar el cuerpo de cada lámpara, para que quede integrado a la forma de la pieza. El cuerpo se arma a mano con placas de cerámica. Una vez modelado, se hornea y se eligen los esmaltes y óxidos que le dan su terminación.",
+      "Después se arma el circuito y se colocan las luces LED orientadas hacia el interior. La luz rebota en la cerámica y sale suave y difusa. Cada lámpara tiene uno o más potenciómetros que permiten ajustar el color de la luz según el espacio o el momento."
     ],
-    "portada": "proyectos/lamparas-ceramica/portada.jpg",
-    "preview": "proyectos/lamparas-ceramica/previews/portada.mp4",
-    "previewMobile": "proyectos/lamparas-ceramica/previews/portada-mobile.mp4",
+    "portada": "proyectos/luminarias-ceramica/portada.jpg",
+    "preview": "proyectos/luminarias-ceramica/previews/portada.mp4",
+    "previewMobile": "proyectos/luminarias-ceramica/previews/portada-mobile.mp4",
     "media": [
       {
-        "src": "proyectos/lamparas-ceramica/aa.jpg",
+        "src": "proyectos/luminarias-ceramica/aa.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7319.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7319.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7321.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7321.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7440.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7440.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7478.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7478.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7525.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7525.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7539.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7539.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7563.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7563.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7637.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7637.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7644.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7644.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7662.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7662.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7671.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7671.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/lamparas-ceramica/DSC_7763.jpg",
+        "src": "proyectos/luminarias-ceramica/DSC_7763.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
@@ -201,8 +203,13 @@
     ],
     "columnas": 1,
     "embeds": [],
-    "corto": "Proyecto final de carrera desarrollado junto a Franco Berrutti y Silvina Datz en el Instituto de Ingeniería Eléctrica (Udelar), situado en la intersección entre la ingeniería y la creación artística. Diseñamos un sistema de mapping dinámico capaz de lograr que la imagen proyectada siga en tiempo real a un objeto en movimiento, pensado como herramienta para las artes escénicas.",
-    "largo": [],
+    "corto": "Proyecto final de carrera desarrollado junto a Franco Berrutti y Silvina Datz en el Instituto de Ingeniería Eléctrica (FING, Udelar), situado en la intersección entre la ingeniería y la creación artística. Se diseñó un sistema de mapping dinámico para las artes escénicas. El sistema permite que la imagen proyectada siga en tiempo real a un objeto en movimiento.",
+    "largo": [
+      "En escena, una proyección suele quedar fija sobre una superficie. El objetivo fue que la imagen acompañara a un objeto en movimiento y que el intérprete pudiera cambiar la proyección con sus propios movimientos.",
+      "El desarrollo comenzó con cámaras convencionales y continuó con una cámara de eventos y un marcador con luces LED infrarrojas, invisibles para el público. La cámara registra el parpadeo de las luces y el sistema usa esa información para calcular la posición y la orientación del marcador. Con esos datos ajusta la imagen continuamente para que se mantenga dentro del área elegida.",
+      "El seguimiento se integró en TouchDesigner y se probaron tres formas de usarlo en escena: una imagen que se adapta al marcador, un video que cambia con la profundidad y un efecto que revela la imagen como un escáner. El sistema se puso a prueba junto a estudiantes de la EMAD durante un ensayo de Ladies Football Club. El ensayo permitió ver cómo funcionaba el sistema en escena y pensar qué ajustes necesitaba a partir del trabajo con las actrices y la dirección.",
+      "Tutores: Álvaro Gómez y Lara Raad."
+    ],
     "portada": "proyectos/mapping-dinamico/portada.webp",
     "preview": "proyectos/mapping-dinamico/previews/portada.mp4",
     "previewMobile": "proyectos/mapping-dinamico/previews/portada-mobile.mp4",
@@ -226,11 +233,11 @@
     "tags": [],
     "columnas": 3,
     "embeds": [],
-    "corto": "Escenografía, visuales y operación de luces para el concierto de Silvia Ana en Inmigrantes, en noviembre de 2025. Una estructura de telas traslúcidas y proyecciones por mapping transformó un espacio sin pantallas en una superficie escénica.",
+    "corto": "Escenografía, visuales y operación de luces para el concierto de Silvia Ana en Inmigrantes, en noviembre de 2025. Una estructura de telas traslúcidas y proyecciones por mapping transformaron un espacio sin pantallas en una superficie escénica.",
     "largo": [
-      "El lugar no tenía pantallas ni superficies lisas para proyectar. La solución fue construir una estructura con varias capas de tela traslúcida, colgar un proyector y ajustar el mapping para que la imagen coincidiera con la superficie elegida.",
-      "Junto a Isa Epstein escuchamos las canciones y exploramos qué transmitía cada una y qué estética podía acompañarlas. A partir de dibujos con acrílico y de las texturas que aparecían al aplastarlo, creamos pequeñas animaciones.",
-      "En TouchDesigner combiné ese material con videos de fondo y generé clips para cada tema, explorando el color y los modos de mezcla. Después uní y edité esos fragmentos en videos de entre 60 y 70 segundos por canción. Además de la escenografía y las visuales, operé las luces durante el concierto."
+      "Como en Inmigrantes no había pantallas ni superficies lisas para proyectar, se armó una estructura con varias capas de tela traslúcida. Se colgó un proyector y se ajustó el mapping para que la imagen coincidiera con la superficie elegida.",
+      "El trabajo con Isabella Epstein empezó por escuchar las canciones y buscar qué imágenes podían acompañar a cada una. Las pequeñas animaciones surgieron de los dibujos con acrílico y de las texturas que aparecían al aplastarlo.",
+      "En TouchDesigner se combinaron esas animaciones con videos de fondo y se probaron distintas formas de mezclar las imágenes y el color. Después, los fragmentos se editaron en piezas de entre 60 y 70 segundos para cada canción. El trabajo también incluyó la operación de luces durante el concierto."
     ],
     "portada": "proyectos/visuales-silvia-ana/portada.JPG",
     "preview": "proyectos/visuales-silvia-ana/previews/portada.mp4",
@@ -302,7 +309,7 @@
     ]
   },
   {
-    "slug": "visuales-sprlcl",
+    "slug": "visuales-superlocal",
     "titulo": "Visuales - Superlocal",
     "anio": 2026,
     "orden": 5,
@@ -312,69 +319,71 @@
     "columnas": 3,
     "embeds": [],
     "corto": "Visuales y mapping realizados para el brindis de apertura de Superlocal, festival internacional de diseño, a partir de la identidad gráfica creada por el estudio Atolón de Mororoa.",
-    "largo": [],
-    "portada": "proyectos/visuales-sprlcl/portada.jpg",
-    "preview": "proyectos/visuales-sprlcl/previews/portada.mp4",
-    "previewMobile": "proyectos/visuales-sprlcl/previews/portada-mobile.mp4",
+    "largo": [
+      "El trabajo consistió en llevar la identidad gráfica de Atolón de Mororoa a piezas en movimiento y proyectarlas con mapping durante el brindis. La selección reúne loops de las visuales y registros de la proyección durante la apertura."
+    ],
+    "portada": "proyectos/visuales-superlocal/portada.jpg",
+    "preview": "proyectos/visuales-superlocal/previews/portada.mp4",
+    "previewMobile": "proyectos/visuales-superlocal/previews/portada-mobile.mp4",
     "media": [
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152035.jpg",
+        "src": "proyectos/visuales-superlocal/Captura%20de%20pantalla%202026-11-12%20152035.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152105.jpg",
+        "src": "proyectos/visuales-superlocal/Captura%20de%20pantalla%202026-11-12%20152105.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152724.jpg",
+        "src": "proyectos/visuales-superlocal/Captura%20de%20pantalla%202026-11-12%20152724.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152758.jpg",
+        "src": "proyectos/visuales-superlocal/Captura%20de%20pantalla%202026-11-12%20152758.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/Captura%20de%20pantalla%202026-11-12%20152826.jpg",
+        "src": "proyectos/visuales-superlocal/Captura%20de%20pantalla%202026-11-12%20152826.jpg",
         "tipo": "imagen",
         "loop": false,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/loop-finales_finales.5.mp4",
+        "src": "proyectos/visuales-superlocal/loop-finales_finales.5.mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/loop-finales_finales.10.mp4",
+        "src": "proyectos/visuales-superlocal/loop-finales_finales.10.mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/loop-IMG_7765.mp4",
+        "src": "proyectos/visuales-superlocal/loop-IMG_7765.mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
         "alt": ""
       },
       {
-        "src": "proyectos/visuales-sprlcl/loop-IMG_7771.mp4",
+        "src": "proyectos/visuales-superlocal/loop-IMG_7771.mp4",
         "tipo": "video",
         "loop": true,
         "portada": false,
@@ -395,7 +404,11 @@
     "columnas": 2,
     "embeds": [],
     "corto": "Instalación interactiva presentada en Ingeniería deMuestra (octubre de 2025) junto a Franco Berrutti y Silvina Datz. Frente a una estructura con siete tiras de luces LED, el público mueve la luz con sus manos y transforma en tiempo real tanto las luces como la música que suena en el espacio.",
-    "largo": [],
+    "largo": [
+      "Frente a la estructura solo se ven las siete tiras de luces. Mientras nadie interactúa, los colores se desplazan suavemente por las tiras. Cuando la cámara detecta una mano, aparece un rectángulo de luz que la sigue como en un espejo. Si la mano sube o baja, la luz cambia de tira. Si se mueve hacia un costado, la luz se desplaza a lo largo de la misma tira.",
+      "En una pantalla, el público ve la posición de sus manos sobre una grilla y cuatro figuras que puede reproducir, generalmente de a dos. Al completar una figura se activa durante tres segundos una respuesta de luz y sonido.",
+      "Se utilizó MediaPipe para detectar y seguir las manos, TouchDesigner para las animaciones de luz y Pure Data para procesar el sonido en tiempo real. La estructura oculta el cableado y los componentes para que la atención quede en cómo responden las luces y la música a los movimientos del público."
+    ],
     "portada": "proyectos/idm/portada.jpg",
     "preview": "",
     "previewMobile": "",

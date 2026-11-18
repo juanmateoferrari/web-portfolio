@@ -1,0 +1,3 @@
+El proceso comenzó con la construcción de pantallas a medida con MDF, madera y papel de calco. El papel difundía la luz de los LED y daba al escenario una iluminación más suave que la que se logra con pantallas LED convencionales. Las distintas profundidades e inclinaciones de las estructuras permitieron distribuir la luz de diferentes maneras y crear distintas atmósferas a lo largo de los conciertos.
+
+Se cablearon más de 1000 luces LED y las pantallas se controlaron con un ESP32. Los efectos de cada canción se prepararon con WLED y TouchDesigner. Durante el montaje en Magnolio Sala se coordinó con el equipo técnico para que las luces de la sala acompañaran los efectos ya programados.

@@ -1,0 +1,5 @@
+Frente a la estructura solo se ven las siete tiras de luces. Mientras nadie interactúa, los colores se desplazan suavemente por las tiras. Cuando la cámara detecta una mano, aparece un rectángulo de luz que la sigue como en un espejo. Si la mano sube o baja, la luz cambia de tira. Si se mueve hacia un costado, la luz se desplaza a lo largo de la misma tira.
+
+En una pantalla, el público ve la posición de sus manos sobre una grilla y cuatro figuras que puede reproducir, generalmente de a dos. Al completar una figura se activa durante tres segundos una respuesta de luz y sonido.
+
+Se utilizó MediaPipe para detectar y seguir las manos, TouchDesigner para las animaciones de luz y Pure Data para procesar el sonido en tiempo real. La estructura oculta el cableado y los componentes para que la atención quede en cómo responden las luces y la música a los movimientos del público.

@@ -1,0 +1,7 @@
+En escena, una proyección suele quedar fija sobre una superficie. El objetivo fue que la imagen acompañara a un objeto en movimiento y que el intérprete pudiera cambiar la proyección con sus propios movimientos.
+
+El desarrollo comenzó con cámaras convencionales y continuó con una cámara de eventos y un marcador con luces LED infrarrojas, invisibles para el público. La cámara registra el parpadeo de las luces y el sistema usa esa información para calcular la posición y la orientación del marcador. Con esos datos ajusta la imagen continuamente para que se mantenga dentro del área elegida.
+
+El seguimiento se integró en TouchDesigner y se probaron tres formas de usarlo en escena: una imagen que se adapta al marcador, un video que cambia con la profundidad y un efecto que revela la imagen como un escáner. El sistema se puso a prueba junto a estudiantes de la EMAD durante un ensayo de Ladies Football Club. El ensayo permitió ver cómo funcionaba el sistema en escena y pensar qué ajustes necesitaba a partir del trabajo con las actrices y la dirección.
+
+Tutores: Álvaro Gómez y Lara Raad.

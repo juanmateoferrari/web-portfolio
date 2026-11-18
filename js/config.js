@@ -6,18 +6,17 @@ export const CONFIG = {
   bio: 'Soy Ingeniero en Sistemas de Comunicación recibido en la Universidad de la República. Me interesa aplicar mis conocimientos técnicos para conectar lo físico y lo digital. Combino trabajo manual, electrónica y programación para crear con luz, imagen y sonido.',
   sobreMi: {                       // presentación de la sección Sobre mí
     foto: 'img/f4bc4094-4b11-41da-bad0-e0839c3f8106.JPG',
-    intro: 'Trabajo con la luz, la imagen y los materiales para crear escenografías, objetos e instalaciones interactivas.',
+    intro: 'Diseño y construyo escenografías e instalaciones interactivas. Me interesa cómo la luz, la imagen y el sonido pueden transformar un espacio.',
     parrafos: [
-      'Me interesa conectar lo físico y lo digital: construir estructuras, diseñar circuitos y programar sistemas que transforman la luz, la imagen y el sonido. En mis proyectos conviven el trabajo manual, la carpintería, la cerámica, la electrónica y la programación.',
+      'Busco conectar lo físico y lo digital: construir estructuras, diseñar circuitos y programar sistemas teniendo en cuenta cómo la gente los percibe e interactúa con ellos. En mis proyectos conviven el trabajo manual, la carpintería, la cerámica, la electrónica y la programación.',
       // 'Esa búsqueda toma distintas formas: un sistema de mapping que sigue a un objeto en movimiento, una instalación donde las manos del público modifican luces y música, o una escenografía con iluminación LED programada.',
-      // 'También desarrollo lámparas de cerámica hechas a mano, integrando el circuito y el recorrido de la luz desde el diseño de la pieza. La forma, los materiales y la técnica se piensan juntos.',
-    ],
+      ],
     experiencia: [
       {
         periodo: 'Actualidad',
         cargo: 'Proyectos independientes',
         organizacion: '',
-        descripcion: 'Escenografía, luz e instalaciones interactivas. Trabajo manual, electrónica y programación.',
+        descripcion: 'Diseño y desarrollo de escenografías, stands e instalaciones interactivas para artistas y eventos.',
       },
       {
         periodo: 'Junio 2025 – Noviembre 2026',
