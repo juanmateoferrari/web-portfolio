@@ -8,7 +8,7 @@ export const CONFIG = {
     foto: 'img/f4bc4094-4b11-41da-bad0-e0839c3f8106.JPG',
     intro: 'Diseño y construyo escenografías e instalaciones interactivas. Me interesa cómo la luz, la imagen y el sonido pueden transformar un espacio.',
     parrafos: [
-      'Busco conectar lo físico y lo digital: construir estructuras, diseñar circuitos y programar sistemas teniendo en cuenta cómo la gente los percibe e interactúa con ellos. En mis proyectos conviven el trabajo manual, la carpintería, la cerámica, la electrónica y la programación.',
+      'Busco conectar lo físico y lo digital: construir estructuras, diseñar circuitos y programar sistemas teniendo en cuenta cómo las personas los percibe e interactúa con ellos. En mis proyectos conviven el trabajo manual, la carpintería, la cerámica, la electrónica y la programación.',
       // 'Esa búsqueda toma distintas formas: un sistema de mapping que sigue a un objeto en movimiento, una instalación donde las manos del público modifican luces y música, o una escenografía con iluminación LED programada.',
       ],
     experiencia: [
