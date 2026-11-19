@@ -6,7 +6,7 @@
 import { CONFIG } from './config.js';
 import { abrirInstagramEnIPhone } from './contact.js';
 import { initEfectos, observarRevelado } from './effects.js';
-import { iniciarEfectosVista, cambiarVista } from './interactive.js';
+import { iniciarEfectosVista, cambiarVista, videoEnPantalla } from './interactive.js';
 
 const app = document.getElementById('app');
 const visor = document.getElementById('visor');
@@ -51,8 +51,7 @@ const pie = () => `<footer class="pie" id="contacto">${navegacion('Navegación d
 // Solo los loop-* MP4/WebM se usan como previews; nunca cargan hasta reproducirse.
 const preview = p => {
   if (!CONFIG.efectos.portadasVideo || matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return null;
-  const mobile = matchMedia('(max-width: 760px), (hover: none) and (pointer: coarse)').matches;
-  const src = mobile ? p.previewMobile || p.preview : p.preview;
+  const src = videoEnPantalla() ? p.previewMobile || p.preview : p.preview;
   return src ? { src } : null;
 };
 const nombreTransicion = p => CONFIG.efectos.transiciones

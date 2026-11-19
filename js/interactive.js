@@ -1,5 +1,6 @@
 // Efectos opcionales por vista. Cada inicialización devuelve su limpieza.
 const movimientoReducido = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+export const videoEnPantalla = () => matchMedia('(max-width: 760px), (hover: none), (pointer: coarse)').matches;
 let transicion;
 
 export function cambiarVista(dibujar, activo) {
@@ -62,10 +63,12 @@ function galeriaVisible(raiz) {
   const controller = new AbortController();
   let cerrado = false;
   const cargar = v => { if (!v.getAttribute('src')) v.src = v.dataset.src; };
+  const parar = v => { v.autoplay = false; v.pause(); };
   const reproducir = v => {
     if (cerrado || document.hidden) return;
-    cargar(v);
     v.muted = true;
+    v.autoplay = true;
+    cargar(v);
     v.play().catch(() => { if (!cerrado && visibles.has(v)) v.controls = true; });
   };
   if (movimientoReducido() || typeof IntersectionObserver === 'undefined') {
@@ -74,34 +77,34 @@ function galeriaVisible(raiz) {
   }
   const observer = new IntersectionObserver(entries => entries.forEach(e => {
     if (e.isIntersecting) { visibles.add(e.target); reproducir(e.target); }
-    else { visibles.delete(e.target); e.target.pause(); }
+    else { visibles.delete(e.target); parar(e.target); }
   }), { threshold: 0 });
   videos.forEach(v => observer.observe(v));
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) videos.forEach(v => v.pause());
+    if (document.hidden) videos.forEach(parar);
     else visibles.forEach(reproducir);
   }, { signal: controller.signal });
-  return () => { cerrado = true; controller.abort(); observer.disconnect(); videos.forEach(v => v.pause()); };
+  return () => { cerrado = true; controller.abort(); observer.disconnect(); videos.forEach(parar); };
 }
 
 function portadas(raiz) {
   if (navigator.connection?.saveData) return () => {};
   const controller = new AbortController();
   const opciones = { signal: controller.signal };
-  const tactil = !matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const tactil = videoEnPantalla();
   const videos = [...raiz.querySelectorAll('.preview-video')];
   const visibles = new Set();
   let cerrado = false;
-  const parar = v => { v.pause(); v.classList.remove('reproduciendo'); };
+  const parar = v => { v.autoplay = false; v.pause(); v.classList.remove('reproduciendo'); };
   const reproducir = async v => {
     videos.filter(otro => otro !== v).forEach(parar);
     if (document.hidden || cerrado) return;
     v.muted = true;
+    v.autoplay = tactil;
     if (!v.getAttribute('src')) v.src = v.dataset.src;
     try {
       await v.play();
-      if (!cerrado && !v.paused) v.classList.add('reproduciendo');
-    } catch { parar(v); } // Si se bloquea el autoplay, queda la foto.
+    } catch { v.classList.remove('reproduciendo'); } // Si se bloquea el autoplay, queda la foto.
   };
   const elegir = () => {
     const candidatos = [...visibles].sort((a, b) =>
@@ -111,13 +114,16 @@ function portadas(raiz) {
   };
   const observer = typeof IntersectionObserver === 'undefined' ? null : new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting && e.intersectionRatio >= .6) visibles.add(e.target);
-      else { visibles.delete(e.target); parar(e.target); }
+      const v = e.target.querySelector('.preview-video');
+      if (e.isIntersecting && e.intersectionRatio >= .6) visibles.add(v);
+      else { visibles.delete(v); parar(v); }
     });
     if (tactil) elegir();
   }, { threshold: [0, .6] });
   videos.forEach(v => {
-    observer?.observe(v);
+    observer?.observe(v.parentElement);
+    v.addEventListener('playing', () => v.classList.add('reproduciendo'), opciones);
+    v.addEventListener('pause', () => { if (v.paused) v.classList.remove('reproduciendo'); }, opciones);
     if (!tactil) {
       const tarjeta = v.closest('.fila');
       tarjeta.addEventListener('pointerenter', () => reproducir(v), opciones);

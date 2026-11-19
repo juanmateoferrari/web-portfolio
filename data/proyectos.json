@@ -215,6 +215,41 @@
     "previewMobile": "proyectos/mapping-dinamico/previews/portada-mobile.mp4",
     "media": [
       {
+        "src": "proyectos/mapping-dinamico/loop-C1362.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/mapping-dinamico/loop-C1370.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/mapping-dinamico/loop-C1379.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/mapping-dinamico/loop-C1417.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/mapping-dinamico/loop-C1419.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
         "src": "proyectos/mapping-dinamico/loop-emad.mp4",
         "tipo": "video",
         "loop": true,
@@ -410,8 +445,8 @@
       "Se utilizó MediaPipe para detectar y seguir las manos, TouchDesigner para las animaciones de luz y Pure Data para procesar el sonido en tiempo real. La estructura oculta el cableado y los componentes para que la atención quede en cómo responden las luces y la música a los movimientos del público."
     ],
     "portada": "proyectos/idm/portada.jpg",
-    "preview": "",
-    "previewMobile": "",
+    "preview": "proyectos/idm/previews/portada.mp4",
+    "previewMobile": "proyectos/idm/previews/portada-mobile.mp4",
     "media": [
       {
         "src": "proyectos/idm/IMG_0758.JPG",
@@ -466,6 +501,27 @@
         "src": "proyectos/idm/IMG_0841.JPG",
         "tipo": "imagen",
         "loop": false,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/idm/loop-xid20251011_1020.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/idm/loop-xid20251011_1021.mp4",
+        "tipo": "video",
+        "loop": true,
+        "portada": false,
+        "alt": ""
+      },
+      {
+        "src": "proyectos/idm/loop-xid20251011_1051.mp4",
+        "tipo": "video",
+        "loop": true,
         "portada": false,
         "alt": ""
       },
